@@ -417,6 +417,7 @@ input:checked + .slider:before {
   display: flex;
   gap: 1rem;
   flex-shrink: 0;
+  align-items:center ;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
