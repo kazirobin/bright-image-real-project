@@ -1,0 +1,455 @@
+/* pricing.css - Complete with base styles and variables */
+
+/* Base Styles and CSS Variables */
+:root {
+  --primary-hover: #240046;
+  --primary-color: #3c096c;
+  --secondary-color: #59189a;
+  --primary-color-light: #7b2cbf;
+  --text-color: #10002b;
+  --color-blue: #132df7;
+  --bg-color: #fff;
+  --light-color: #f1faee;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --transition: all 0.3s ease;
+  --border-radius: 0.5rem;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  line-height: 1.5;
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Pricing Section */
+.pricing-section {
+  padding: 80px 20px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+/* Header Styles */
+.pricing-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pricing-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.pricing-header p {
+  font-size: 1.1rem;
+  color: var(--gray-700);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Toggle Switch */
+.pricing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.toggle-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  transition: color 0.3s ease;
+}
+
+.toggle-label.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 60px;
+  height: 32px;
+}
+
+.toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gray-400);
+  border-radius: 32px;
+  transition: 0.3s;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: var(--shadow-sm);
+}
+
+.toggle-input:checked + .toggle-slider {
+  background: var(--primary-color);
+}
+
+.toggle-input:checked + .toggle-slider:before {
+  transform: translateX(28px);
+}
+
+.discount-badge {
+  background: linear-gradient(135deg, var(--primary-hover), var(--secondary-color));
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Pricing Cards */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.pricing-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 40px 30px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pricing-card.popular {
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.pricing-card.popular:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  color: white;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.card-header p {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Price Container */
+.price-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-hover);
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-color);
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.price-unit {
+  font-size: 1rem;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.delivery-time {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.delivery-badge {
+  background: linear-gradient(135deg, var(--primary-hover), var(--secondary-color));
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Features List */
+.features-list {
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.features-list li {
+  padding: 8px 0;
+  color: var(--gray-700);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.features-list li:before {
+  content: "✓";
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 1.1rem;
+}
+
+/* CTA Button */
+.cta-button {
+  width: 100%;
+  padding: 16px 24px;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 30px;
+}
+
+.cta-button:hover {
+  background: var(--primary-hover);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.cta-button.primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-color: transparent;
+}
+
+.cta-button.primary:hover {
+  background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Sample Image */
+.sample-image {
+  text-align: center;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  height: 120px;
+  background: linear-gradient(135deg, var(--gray-200), var(--gray-300));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.sample-image::before {
+  content: "Sample Image";
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 60px 15px;
+  }
+
+  .pricing-header h2 {
+    font-size: 2rem;
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pricing-card.popular {
+    transform: none;
+  }
+
+  .pricing-card.popular:hover {
+    transform: translateY(-10px);
+  }
+
+  .price {
+    font-size: 2.5rem;
+  }
+
+  .pricing-toggle {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-section {
+    padding: 40px 15px;
+  }
+
+  .pricing-card {
+    padding: 30px 20px;
+  }
+
+  .pricing-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .price {
+    font-size: 2.2rem;
+  }
+
+  .pricing-toggle {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Animation Classes */
+.price-change {
+  animation: priceChange 0.5s ease-in-out;
+}
+
+@keyframes priceChange {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    color: var(--secondary-color);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.features-update {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

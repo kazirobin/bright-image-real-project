@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright Image Global - Professional Image Editing</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Navigation Styles -->
+    <link
+      rel="stylesheet"
+      href="/sharedLayout/navigation/mainNavigation.styles.css"
+    />
+    <!-- Footer styles -->
+    <link rel="stylesheet" href="/sharedLayout/footer/footer.css" />
+    <link rel="stylesheet" href="./contact.css" />
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="/index.html" class="logo-container">
+          <img src="/logo.png" alt="Bright Image Global Logo" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <a href="/index.html" class="nav-link">HOME</a>
+
+          <!-- Services Dropdown -->
+          <div class="dropdown">
+            <button class="nav-link dropdown-btn">
+              Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </button>
+            <div class="dropdown-content services-dropdown">
+              <div class="services-grid">
+                <div class="service-category">
+                  <h3>BASIC EDITING</h3>
+                  <ul>
+                    <li>
+                      <a href="/services/clipping/clipping.html"
+                        >Clipping Path</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/bgRemoval/bgRemoval.html"
+                        >Bg Removal</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/resizing/resizing.html">Resizing</a>
+                    </li>
+                    <li>
+                      <a href="/services/masking/masking.html">Masking</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-category">
+                  <h3>ADVANCE EDITING</h3>
+                  <ul>
+                    <li>
+                      <a href="/services/ecommerceEditing/ecommerceEditing.html"
+                        >E-commerce EDITING</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/services/beauty-retouching/beauty-retouching.html"
+                        >Beauty Retouching</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/jewellery-retouching/jewellery.html"
+                        >Jewelry Retouching</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/services/realestateEditing/realestateEditing.html"
+                        >Real-Estate Editing</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-category">
+                  <h3>IMAGE MANIPULATION</h3>
+                  <ul>
+                    <li>
+                      <a href="/services/imageMasking/imageMasking.html"
+                        >Image Masking</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/blending/blending.html">Blending</a>
+                    </li>
+                    <li>
+                      <a href="/services/colorAdjustment/colorAdjustment.html"
+                        >Color Adjustment</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/imageCombination/imageCombination.html"
+                        >Image combination</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="/projects/projects.html" class="nav-link">Projects</a>
+          <a href="/price/price.html" class="nav-link">Price</a>
+          <a href="/blog/blog.html" class="nav-link">Blog</a>
+          <a href="/contact/contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="cta-section">
+          <a href="/freeTrial/freeTrial.html">
+            <button class="btn btn-yellow">FREE TRIAL</button>
+          </a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <span class="mobile-menu-title">Menu</span>
+        <button class="mobile-menu-close" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="mobile-menu-content">
+        <nav class="mobile-nav">
+          <a href="/index.html" class="mobile-nav-link">HOME</a>
+
+          <!-- Mobile Services Section -->
+          <div class="mobile-dropdown">
+            <button class="mobile-nav-link mobile-dropdown-btn">
+              Services
+              <i class="fas fa-chevron-down mobile-dropdown-icon"></i>
+            </button>
+            <div class="mobile-dropdown-content">
+              <div class="mobile-service-category">
+                <h4>BASIC EDITING</h4>
+                <ul>
+                  <li>
+                    <a href="/services/clipping/cliping.html">Clipping Path</a>
+                  </li>
+                  <li>
+                    <a href="/services/bgRemoval/bgRemoval.html">Bg Removal</a>
+                  </li>
+                  <li>
+                    <a href="/services/resizing/resizing.html">Resizing</a>
+                  </li>
+                  <li><a href="/services/masking/masking.html">Masking</a></li>
+                </ul>
+              </div>
+
+              <div class="mobile-service-category">
+                <h4>ADVANCE EDITING</h4>
+                <ul>
+                  <li>
+                    <a href="/services/ecommerceEditing/ecommerceEditing.html"
+                      >E-commerce EDITING</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/services/beauty-retouching/beauty-retouching.html"
+                      >Beauty Retouching</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/services/jewellery-retouching/jewellery.html"
+                      >Jewelry Retouching</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/services/realestateEditing/realestateEditing.html"
+                      >Real-Estate Editing</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mobile-service-category">
+                <h4>IMAGE MANIPULATION</h4>
+                <ul>
+                  <li>
+                    <a href="/services/masking/masking.html">Image Masking</a>
+                  </li>
+                  <li>
+                    <a href="/services/blending/blending.html">Blending</a>
+                  </li>
+                  <li>
+                    <a href="/services/colorAdjustment/colorAdjustment.html"
+                      >Color Adjustment</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/services/imageCombination/imageCombination.html"
+                      >Image combination</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <a href="/projects/projects.html" class="mobile-nav-link">Projects</a>
+          <a href="/price/price.html" class="mobile-nav-link">Price</a>
+          <a href="/blog/blog.html" class="mobile-nav-link">Blog</a>
+          <a href="/contact/contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+      </div>
+      <div class="mobile-menu-footer">
+        <a href="/freeTrial/freeTrial.html" class="btn btn-yellow mobile-btn"
+          >FREE TRIAL</a
+        >
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <span class=""></span>
+          <h1>Contact Our <span class="highlight">Experts</span></h1>
+          <p class="hero-description"></p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <i class="fas fa-clock"></i>
+              <span>24/7 Support</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-reply"></i>
+              <span>Quick Response</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-gift"></i>
+              <span>Free Sample</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+      <div class="container">
+        <div class="methods-grid">
+          <div class="method-card">
+            <div class="method-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email Us</h3>
+            <p>Get detailed responses to your questions</p>
+            <div class="method-info">
+              <a href="mailto:info@clippingpath.com">info@clippingpath.com</a>
+              <span class="response-time">Response within 2 hours</span>
+            </div>
+          </div>
+          <div class="method-card">
+            <div class="method-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>Call Us</h3>
+            <p>Speak directly with our experts</p>
+            <div class="method-info">
+              <a href="tel:+1234567890">+1 (234) 567-8900</a>
+              <span class="response-time">Available 24/7</span>
+            </div>
+          </div>
+          <div class="method-card">
+            <div class="method-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3>Live Chat</h3>
+            <p>Instant support for quick questions</p>
+            <div class="method-info">
+              <button class="chat-btn" onclick="openLiveChat()">
+                Start Chat
+              </button>
+              <span class="response-time">Online now</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="main-contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <!-- Contact Form -->
+          <div class="contact-form-section">
+            <div class="form-header">
+              <h2>Get Your Free Quote</h2>
+              <p>
+                Fill out the form below and we'll get back to you with a
+                detailed quote within 2 hours.
+              </p>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" required />
+                  <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" required />
+                  <span class="error-message"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required />
+                  <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" />
+                  <span class="error-message"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company" />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="serviceType">Service Type *</label>
+                  <select id="serviceType" name="serviceType" required>
+                    <option value="">Select a service</option>
+                    <option value="basic">Basic Clipping Path</option>
+                    <option value="standard">Standard Clipping Path</option>
+                    <option value="premium">Premium Clipping Path</option>
+                    <option value="enterprise">Enterprise Solutions</option>
+                    <option value="bulk">Bulk Processing</option>
+                    <option value="other">Other Services</option>
+                  </select>
+                  <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                  <label for="imageCount">Number of Images</label>
+                  <select id="imageCount" name="imageCount">
+                    <option value="">Select quantity</option>
+                    <option value="1-10">1-10 images</option>
+                    <option value="11-50">11-50 images</option>
+                    <option value="51-100">51-100 images</option>
+                    <option value="101-500">101-500 images</option>
+                    <option value="500+">500+ images</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="budget">Project Budget</label>
+                <select id="budget" name="budget">
+                  <option value="">Select budget range</option>
+                  <option value="under-100">Under $100</option>
+                  <option value="100-500">$100 - $500</option>
+                  <option value="500-1000">$500 - $1,000</option>
+                  <option value="1000-5000">$1,000 - $5,000</option>
+                  <option value="5000+">$5,000+</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Project Details *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Please describe your project requirements, timeline, and any specific instructions..."
+                  required
+                ></textarea>
+                <span class="error-message"></span>
+              </div>
+
+              <div class="form-group file-upload-group">
+                <label for="fileUpload">Upload Sample Images</label>
+                <div class="file-upload-area" id="fileUploadArea">
+                  <input
+                    type="file"
+                    id="fileUpload"
+                    name="files"
+                    multiple
+                    accept="image/*,.psd,.ai"
+                  />
+                  <div class="upload-content">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>
+                      Drag & drop files here or
+                      <span class="upload-link">browse</span>
+                    </p>
+                    <small
+                      >Supported formats: JPG, PNG, PSD, AI (Max 10MB
+                      each)</small
+                    >
+                  </div>
+                </div>
+                <div class="uploaded-files" id="uploadedFiles"></div>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="newsletter" name="newsletter" />
+                  <span class="checkmark"></span>
+                  Subscribe to our newsletter for tips and updates
+                </label>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="terms" name="terms" required />
+                  <span class="checkmark"></span>
+                  I agree to the
+                  <a href="#" target="_blank">Terms of Service</a> and
+                  <a href="#" target="_blank">Privacy Policy</a> *
+                </label>
+                <span class="error-message"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit-btn">
+                <span class="btn-text">Send Message & Get Quote</span>
+                <span class="btn-loading">
+                  <i class="fas fa-spinner fa-spin"></i> Sending...
+                </span>
+              </button>
+
+              <p class="form-note">
+                <i class="fas fa-shield-alt"></i>
+                Your information is secure and will never be shared with third
+                parties.
+              </p>
+            </form>
+          </div>
+
+          <!-- Contact Info Sidebar -->
+          <div class="contact-info-section">
+            <div class="contact-card">
+              <div class="contact-header">
+                <img
+                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop"
+                  alt="Our Office"
+                  class="office-image"
+                />
+                <div class="contact-overlay"></div>
+                <div class="contact-badge">
+                  <i class="fas fa-award"></i>
+                  <span>Trusted by 5000+ Clients</span>
+                </div>
+              </div>
+
+              <div class="contact-details">
+                <h3>Why Choose Us?</h3>
+                <div class="feature-list">
+                  <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Free sample editing</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>24-hour turnaround</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Unlimited revisions</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Money-back guarantee</span>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div>
+                    <strong>Main Office</strong>
+                    <p>
+                      123 Business Avenue<br />Suite 100, New York, NY 10001
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <i class="fas fa-clock"></i>
+                  <div>
+                    <strong>Business Hours</strong>
+                    <p>
+                      Monday - Friday: 9:00 AM - 6:00 PM EST<br />
+                      Saturday: 10:00 AM - 4:00 PM EST<br />
+                      Sunday: Closed
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <i class="fas fa-headset"></i>
+                  <div>
+                    <strong>24/7 Support</strong>
+                    <p>Emergency support available<br />for urgent projects</p>
+                  </div>
+                </div>
+
+                <div class="social-links">
+                  <h4>Follow Us</h4>
+                  <div class="social-icons">
+                    <a href="#" class="social-icon facebook"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a href="#" class="social-icon twitter"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="#" class="social-icon linkedin"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                    <a href="#" class="social-icon instagram"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="#" class="social-icon youtube"
+                      ><i class="fab fa-youtube"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Find Our Office</h2>
+          <p>
+            Visit us in person or use our convenient online services from
+            anywhere in the world
+          </p>
+        </div>
+        <div class="map-container">
+          <div class="map-placeholder">
+            <img
+              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&h=400&fit=crop"
+              alt="Office Location Map"
+            />
+            <div class="map-overlay">
+              <div class="map-info">
+                <h3>Our Location</h3>
+                <p>123 Business Avenue, Suite 100<br />New York, NY 10001</p>
+                <button class="btn btn-primary" onclick="openMap()">
+                  <i class="fas fa-directions"></i> Get Directions
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="location-details">
+            <h3>Easy to Find</h3>
+            <div class="location-features">
+              <div class="location-feature">
+                <i class="fas fa-subway"></i>
+                <div>
+                  <strong>Public Transport</strong>
+                  <p>2 blocks from Central Station</p>
+                </div>
+              </div>
+              <div class="location-feature">
+                <i class="fas fa-parking"></i>
+                <div>
+                  <strong>Parking Available</strong>
+                  <p>Free parking for visitors</p>
+                </div>
+              </div>
+              <div class="location-feature">
+                <i class="fas fa-wheelchair"></i>
+                <div>
+                  <strong>Accessible</strong>
+                  <p>Wheelchair accessible entrance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>
+            Quick answers to common questions about our services and process
+          </p>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How quickly can you complete my project?</h3>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>
+                  Our standard turnaround times are: Basic (24 hours), Standard
+                  (12 hours), Premium (6 hours). For urgent projects, we offer
+                  2-hour express service at no extra cost for Enterprise
+                  clients.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Do you offer free samples?</h3>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>
+                  Yes! We provide free sample editing for up to 2 images so you
+                  can see our quality before placing an order. Simply upload
+                  your images through our contact form.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What file formats do you accept?</h3>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>
+                  We accept all major formats including JPEG, PNG, TIFF, PSD,
+                  AI, RAW files, and more. We can also deliver in any format you
+                  require for your specific needs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How do you ensure quality and security?</h3>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>
+                  All images are processed by certified professionals with 5+
+                  years experience. We use secure servers, sign NDAs, and have a
+                  multi-step quality control process with unlimited revisions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What are your payment terms?</h3>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>
+                  We accept all major credit cards, PayPal, and bank transfers.
+                  Payment is due upon completion. For large projects, we offer
+                  flexible payment terms and volume discounts.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can you handle large volume projects?</h3>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>
+                  We regularly handle projects with thousands of images. Our
+                  team can scale to meet your deadlines, and we offer
+                  significant volume discounts for bulk orders.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+
+    <!-- CTA Section -->
+    <section class="cta-section-1">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Get Started?</h2>
+          <p>
+            Join thousands of satisfied customers who trust us with their image
+            editing needs. Get your free sample today!
+          </p>
+          <div class="cta-buttons">
+            <button class="btn btn-primary" onclick="scrollToForm()">
+              Get Free Quote
+            </button>
+            <button class="btn btn-outline-white" onclick="openLiveChat()">
+              Start Live Chat
+            </button>
+          </div>
+          <div class="cta-features">
+            <span><i class="fas fa-check"></i> Free Sample Edit</span>
+            <span><i class="fas fa-check"></i> 24/7 Support</span>
+            <span><i class="fas fa-check"></i> Money Back Guarantee</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3 class="footer-title">About us</h3>
+          <div class="footer-divider"></div>
+          <p class="footer-text">
+            Edity is a Professional Photo Editing Company in Bangladesh with
+            more than 150 Photoshop professionals. We have 5+ years of
+            experience in photo editing services. We have become one of the
+            fastest-growing photo editing service providers since 2025.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Important Links</h3>
+          <div class="footer-divider"></div>
+          <ul class="footer-links">
+            <li><a href="/about/about.html">About us</a></li>
+            <li><a href="/terms/terms.html">Terms and Conditions</a></li>
+            <li><a href="/privacy/privacy.html">Privacy Policy</a></li>
+            <li><a href="">Data Security Policy</a></li>
+            <li><a href="">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Contact us</h3>
+          <div class="footer-divider"></div>
+          <div class="contact-info">
+            <p>
+              Bangladesh Office 984, Rupatok, Road no.20/1 Basal, Bangladesh
+            </p>
+            <p>
+              Email:
+              <a href="mailto:info@zenithclipping.com"
+                >info@brightimageglobal.com</a
+              >
+            </p>
+            <p>Phone: <a href="tel:+8801681866775">+8801681866775</a></p>
+          </div>
+        </div>
+         <div class="footer-column">
+          <h3 class="footer-title">Payment Accepted</h3>
+          <div class="footer-divider"></div>
+          <div class="contact-info">
+            <img src="../assets/untitled-final-300x144-1-1.png.webp" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="center-social-icons social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2025 All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../sharedLayout/navigation/mainNavigation.js"></script>
+
+    <script src="./contact.js"></script>
+  </body>
+</html>

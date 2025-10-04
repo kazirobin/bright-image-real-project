@@ -1,0 +1,286 @@
+/* Base Styles */
+
+a {
+  text-decoration: none;
+}
+.footer {
+  background-color: var(--text-color);
+  color: #fff;
+  padding: 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  justify-content: space-evenly;
+}
+
+.footer-column:first-of-type {
+  flex: 1.5;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.footer-title {
+  color: var(--light-color);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--primary-color-light);
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+.social-icons-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.social-icon i {
+  font-size: 1.5rem;
+}
+
+.social-icon:hover {
+  background-color: var(--primary-color-light);
+  transform: translateY(-3px);
+}
+
+.footer-links.inline-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* mobile এ wrap হবে */
+  justify-content: center; /* mobile এ center */
+  gap: 15px; /* লিংকের মধ্যে gap */
+}
+
+.footer-links.inline-links li {
+  margin: 0;
+}
+
+.footer-links.inline-links a {
+  text-decoration: none;
+  color: #fff; /* ইচ্ছেমতো color */
+  transition: color 0.3s;
+}
+
+.footer-links.inline-links a:hover {
+  color: #ff6f61; /* hover color */
+}
+
+/* চাইলে breakpoint-এ লিংকের ফন্ট সাইজ adjust করতে পারো */
+@media (max-width: 768px) {
+  .footer-links.inline-links {
+    gap: 10px; /* mobile এ gap কমিয়ে দিতে পারো */
+  }
+}
+
+/* Footer links */
+.footer-links {
+  list-style: none;
+  padding-inline: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color-light);
+}
+
+/* Contact info */
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: var(--primary-color-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Payment methods */
+.payment-methods {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.payment-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  background-color: var(--primary-hover);
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .footer-container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-container {
+    max-width: 720px;
+  }
+
+  .footer-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    max-width: 540px;
+  }
+
+  .footer-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer-title {
+    font-size: 16px;
+  }
+
+  /* Social icons */
+  .social-icons {
+    gap: 48px;
+  }
+
+  .social-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .social-icon i {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    padding: 30px 15px;
+  }
+  button.btn.btn-yellow {
+    display: none;
+  }
+  .footer-column {
+    padding: 0 10px;
+    margin-bottom: 25px;
+  }
+
+  /* Social icons */
+
+  .social-icons {
+    flex-wrap: nowrap;
+  }
+
+  .social-icons {
+    gap: 32px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .social-icon i {
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}
+
+/* Special styling for very small screens */
+@media (max-width: 400px) {
+  .footer-title {
+    font-size: 15px;
+  }
+
+  .footer-text,
+  .contact-info p {
+    font-size: 13px;
+  }
+
+  .social-icons {
+    gap: 20px;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .social-icon i {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}

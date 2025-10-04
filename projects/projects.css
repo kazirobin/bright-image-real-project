@@ -1,0 +1,99 @@
+@import url(../styles.css);
+.projects-section {
+  padding: 0 !important;
+  .title {
+    padding-block: 20px;
+    text-align: center;
+  }
+  .service-card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    .details {
+      i{
+        color: green;
+      }
+    }
+  }
+}
+/* Filter Section Styles */
+.filter-section {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.filter-title {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #333;
+}
+.filter-details {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  max-width: 900px;
+  margin-inline: auto;
+  color: #333;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.filter-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.filter-btn.active {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+/* Project Grid Styles */
+
+.service-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card.hidden {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filter-buttons {
+    gap: 5px;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .services-grid.projects {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,334 @@
+/* ================================
+   Global Reset & Base Styles
+================================= */
+@import url("../../../styles.css");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --primary-hover: #240046;
+  --primary-color: #3c096c;
+  --secondary-color: #59189a;
+  --primary-color-light: #7b2cbf;
+  --text-color: #10002b;
+  --color-blue:#132DF7;
+  --bg-color: #fff;
+  --light-color: #f1faee;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --transition: all 0.3s ease;
+  --border-radius: 0.5rem;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f0f0f0;
+  color: #222;
+  line-height: 1.5;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* ================================
+   Hero Section
+================================= */
+.clipping-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: var(--white);
+  padding: 60px 0 100px;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  z-index: -1;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  min-width: 320px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.badge  {
+  color: var(--bg-color);
+}
+
+.hero-title {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--bg-color);
+}
+
+.text-accent {
+  color: #4cc9f0;
+}
+
+.hero-description {
+  color: var(--light-color);
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-white {
+  background: #fff;
+  color: #16213e;
+  border: 2px solid #fff;
+}
+.btn-white:hover {
+  background: transparent;
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--gray-700);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.btn-outline:hover {
+  border-color: #fff;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.stat {
+  text-align: center;
+}
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4cc9f0;
+}
+.stat-label {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  min-width: 320px;
+  position: relative;
+}
+
+/* ================================
+   Projects Section
+================================= */
+.projects-section {
+  padding: 60px 20px;
+  background: linear-gradient(120deg, #fffaf7 0%, #fef7f0 100%);
+}
+
+.projects-section .title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  max-width: 1200px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.image-compare {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: ew-resize;
+}
+.image-compare img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-compare .after {
+  clip-path: inset(0 50% 0 0);
+  z-index: 2;
+}
+.image-compare .before {
+  z-index: 1;
+}
+.image-compare .mask {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #000;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.label {
+  position: absolute;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 500;
+  z-index: 4;
+  pointer-events: none;
+}
+.before-label {
+  top: 10px;
+  left: 10px;
+}
+.after-label {
+  top: 10px;
+  right: 10px;
+}
+
+.card-content {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.price {
+  color: #d87522;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.desc {
+  font-size: 0.9rem;
+  color: #555;
+  flex: 1;
+}
+
+.cta-button {
+  align-self: flex-start;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0078d4;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.cta-button:hover {
+  background-color: #005ea2;
+  transform: translateY(-2px);
+}
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================
+   Responsive Tweaks
+================================= */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-stats {
+    justify-content: center;
+  }
+}

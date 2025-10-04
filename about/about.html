@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright Image Global - Professional Image Editing</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Navigation Styles -->
+    <link
+      rel="stylesheet"
+      href="/sharedLayout/navigation/mainNavigation.styles.css"
+    />
+
+    <link rel="stylesheet" href="./about.css" />
+
+    <!-- Footer Styles -->
+    <link rel="stylesheet" href="/sharedLayout/footer/footer.css" />
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="/index.html" class="logo-container">
+          <img src="/logo.png" alt="Bright Image Global Logo" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <a href="/index.html" class="nav-link">HOME</a>
+
+          <!-- Services Dropdown -->
+          <div class="dropdown">
+            <button class="nav-link dropdown-btn">
+              Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </button>
+            <div class="dropdown-content services-dropdown">
+              <div class="services-grid">
+                <div class="service-category">
+                  <h3>BASIC EDITING</h3>
+                  <ul>
+                    <li>
+                      <a href="/services/clipping/clipping.html"
+                        >Clipping Path</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/bgRemoval/bgRemoval.html"
+                        >Bg Removal</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/resizing/resizing.html">Resizing</a>
+                    </li>
+                    <li>
+                      <a href="/services/masking/masking.html">Masking</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-category">
+                  <h3>ADVANCE EDITING</h3>
+                  <ul>
+                    <li>
+                      <a href="/services/ecommerceEditing/ecommerceEditing.html"
+                        >E-commerce EDITING</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/services/beauty-retouching/beauty-retouching.html"
+                        >Beauty Retouching</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/jewellery-retouching/jewellery.html"
+                        >Jewelry Retouching</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/services/realestateEditing/realestateEditing.html"
+                        >Real-Estate Editing</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-category">
+                  <h3>IMAGE MANIPULATION</h3>
+                  <ul>
+                    <li>
+                      <a href="/services/imageMasking/imageMasking.html"
+                        >Image Masking</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/blending/blending.html">Blending</a>
+                    </li>
+                    <li>
+                      <a href="/services/colorAdjustment/colorAdjustment.html"
+                        >Color Adjustment</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/imageCombination/imageCombination.html"
+                        >Image combination</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="/projects/projects.html" class="nav-link">Projects</a>
+          <a href="/price/price.html" class="nav-link">Price</a>
+          <a href="/blog/blog.html" class="nav-link">Blog</a>
+          <a href="/contact/contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="cta-section">
+          <a href="/freeTrial/freeTrial.html">
+            <button class="btn btn-yellow">FREE TRIAL</button>
+          </a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <span class="mobile-menu-title">Menu</span>
+        <button class="mobile-menu-close" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="mobile-menu-content">
+        <nav class="mobile-nav">
+          <a href="/index.html" class="mobile-nav-link">HOME</a>
+
+          <!-- Mobile Services Section -->
+          <div class="mobile-dropdown">
+            <button class="mobile-nav-link mobile-dropdown-btn">
+              Services
+              <i class="fas fa-chevron-down mobile-dropdown-icon"></i>
+            </button>
+            <div class="mobile-dropdown-content">
+              <div class="mobile-service-category">
+                <h4>BASIC EDITING</h4>
+                <ul>
+                  <li>
+                    <a href="/services/clipping/clipping.html">Clipping Path</a>
+                  </li>
+                  <li>
+                    <a href="/services/bgRemoval/bgRemoval.html">Bg Removal</a>
+                  </li>
+                  <li>
+                    <a href="/services/resizing/resizing.html">Resizing</a>
+                  </li>
+                  <li><a href="/services/masking/masking.html">Masking</a></li>
+                </ul>
+              </div>
+
+              <div class="mobile-service-category">
+                <h4>ADVANCE EDITING</h4>
+                <ul>
+                  <li>
+                    <a href="/services/ecommerceEditing/ecommerceEditing.html"
+                      >E-commerce EDITING</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/services/beauty-retouching/beauty-retouching.html"
+                      >Beauty Retouching</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/services/jewellery-retouching/jewellery.html"
+                      >Jewelry Retouching</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/services/realestateEditing/realestateEditing.html"
+                      >Real-Estate Editing</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mobile-service-category">
+                <h4>IMAGE MANIPULATION</h4>
+                <ul>
+                  <li>
+                    <a href="/services/masking/masking.html">Image Masking</a>
+                  </li>
+                  <li>
+                    <a href="/services/blending/blending.html">Blending</a>
+                  </li>
+                  <li>
+                    <a href="/services/colorAdjustment/colorAdjustment.html"
+                      >Color Adjustment</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/services/imageCombination/imageCombination.html"
+                      >Image combination</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <a href="/projects/projects.html" class="mobile-nav-link">Projects</a>
+          <a href="/price/price.html" class="mobile-nav-link">Price</a>
+          <a href="/blog/blog.html" class="mobile-nav-link">Blog</a>
+          <a href="/contact/contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+      </div>
+      <div class="mobile-menu-footer">
+        <a href="/freeTrial/freeTrial.html" class="btn btn-yellow mobile-btn"
+          >FREE TRIAL</a
+        >
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-badge">
+              <span class="badge-icon">🌍</span>
+              Global Excellence
+            </div>
+            <h1 class="hero-title">
+              Creating Amazing
+              <span class="highlight-text">Digital Experiences</span>
+              Worldwide
+            </h1>
+            <p class="hero-description">
+              We're a dynamic global team passionate about delivering innovative
+              solutions that transform businesses and inspire communities across
+              the world.
+            </p>
+            <div class="hero-buttons">
+              <button class="btn-primary">
+                <span>Discover More</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M6 12L10 8L6 4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+              <button class="btn-secondary">
+                <span>Watch Story</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M5 3L13 8L5 13V3Z" fill="currentColor" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="globe-container">
+              <div class="globe-card main-globe">
+                <img
+                  src="/placeholder.svg?height=300&width=300"
+                  alt="Global network"
+                  class="globe-img"
+                />
+                <div class="globe-overlay">
+                  <div class="pulse-dot"></div>
+                  <div class="pulse-dot pulse-2"></div>
+                  <div class="pulse-dot pulse-3"></div>
+                </div>
+              </div>
+              <div class="floating-cards">
+                <div class="float-card card-1">
+                  <div class="card-icon">🚀</div>
+                  <div class="card-text">Innovation</div>
+                </div>
+                <div class="float-card card-2">
+                  <div class="card-icon">⭐</div>
+                  <div class="card-text">Excellence</div>
+                </div>
+                <div class="float-card card-3">
+                  <div class="card-icon">🤝</div>
+                  <div class="card-text">Partnership</div>
+                </div>
+                <div class="float-card card-4">
+                  <div class="card-icon">🌟</div>
+                  <div class="card-text">Quality</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stats-bar">
+          <div class="stat-item">
+            <div class="stat-number">150+</div>
+            <div class="stat-label">Countries Served</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">50K+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">1M+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Global Support</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge bright">
+            <span class="badge-emoji">✨</span>
+            Our Mission
+          </div>
+          <h2 class="section-title">Empowering Global Innovation</h2>
+          <p class="section-subtitle">
+            We believe in the power of creativity and technology to solve
+            complex challenges and create meaningful impact across diverse
+            communities worldwide.
+          </p>
+        </div>
+        <div class="mission-grid">
+          <div class="mission-card bright-card">
+            <div class="card-header">
+              <div class="card-icon-bright innovation">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <path
+                    d="M14 2L18 10H26L20 16L24 26L14 20L4 26L8 16L2 10H10L14 2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <h3 class="card-title-bright">Innovation First</h3>
+            </div>
+            <p class="card-description-bright">
+              Pioneering cutting-edge solutions that push boundaries and set new
+              industry standards globally.
+            </p>
+            <div class="card-footer">
+              <span class="card-tag">Technology</span>
+              <span class="card-tag">Future</span>
+            </div>
+          </div>
+          <div class="mission-card bright-card">
+            <div class="card-header">
+              <div class="card-icon-bright global">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <circle
+                    cx="14"
+                    cy="14"
+                    r="12"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M2 14H26M14 2C17.5 6 17.5 22 14 26M14 2C10.5 6 10.5 22 14 26"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <h3 class="card-title-bright">Global Impact</h3>
+            </div>
+            <p class="card-description-bright">
+              Creating positive change across continents through collaborative
+              partnerships and shared vision.
+            </p>
+            <div class="card-footer">
+              <span class="card-tag">Worldwide</span>
+              <span class="card-tag">Impact</span>
+            </div>
+          </div>
+          <div class="mission-card bright-card">
+            <div class="card-header">
+              <div class="card-icon-bright excellence">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <path
+                    d="M14 2L17 11H26L19 16L22 25L14 20L6 25L9 16L2 11H11L14 2Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <h3 class="card-title-bright">Excellence Always</h3>
+            </div>
+            <p class="card-description-bright">
+              Maintaining the highest standards of quality and service in every
+              project we undertake.
+            </p>
+            <div class="card-footer">
+              <span class="card-tag">Quality</span>
+              <span class="card-tag">Standards</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="journey">
+      <div class="container">
+        <div class="journey-content">
+          <div class="journey-visual">
+            <div class="journey-image">
+              <img
+                src="/placeholder.svg?height=400&width=500"
+                alt="Our global journey"
+                class="journey-img"
+              />
+              <div class="image-overlay">
+                <div class="overlay-stats">
+                  <div class="overlay-stat">
+                    <span class="stat-big">12+</span>
+                    <span class="stat-small">Years</span>
+                  </div>
+                  <div class="overlay-stat">
+                    <span class="stat-big">500+</span>
+                    <span class="stat-small">Team</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="journey-text">
+            <div class="section-badge bright">
+              <span class="badge-emoji">🚀</span>
+              Our Journey
+            </div>
+            <h2 class="section-title">From Vision to Global Reality</h2>
+            <p class="journey-description">
+              What started as a bold vision has evolved into a global movement,
+              connecting talented individuals across continents to deliver
+              exceptional results.
+            </p>
+            <div class="journey-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">🌱</div>
+                <div class="highlight-content">
+                  <h4>Humble Beginnings</h4>
+                  <p>Started with a small team and big dreams in 2012</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🌍</div>
+                <div class="highlight-content">
+                  <h4>Global Expansion</h4>
+                  <p>Expanded to 6 continents with diverse talent</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🏆</div>
+                <div class="highlight-content">
+                  <h4>Industry Recognition</h4>
+                  <p>Awarded for innovation and excellence worldwide</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🔮</div>
+                <div class="highlight-content">
+                  <h4>Future Forward</h4>
+                  <p>Pioneering next-generation solutions and technologies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge bright">
+            <span class="badge-emoji">💎</span>
+            Core Values
+          </div>
+          <h2 class="section-title">What Drives Our Success</h2>
+          <p class="section-subtitle">
+            Our values are the foundation of everything we do, guiding our
+            decisions and shaping our culture across all global offices.
+          </p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card creativity">
+            <div class="value-icon">
+              <div class="icon-bg"></div>
+              <span class="icon-emoji">🎨</span>
+            </div>
+            <h3 class="value-title">Creativity</h3>
+            <p class="value-description">
+              Unleashing imagination to create unique and inspiring solutions
+            </p>
+            <div class="value-accent"></div>
+          </div>
+          <div class="value-card collaboration">
+            <div class="value-icon">
+              <div class="icon-bg"></div>
+              <span class="icon-emoji">🤝</span>
+            </div>
+            <h3 class="value-title">Collaboration</h3>
+            <p class="value-description">
+              Working together across cultures to achieve extraordinary results
+            </p>
+            <div class="value-accent"></div>
+          </div>
+          <div class="value-card integrity">
+            <div class="value-icon">
+              <div class="icon-bg"></div>
+              <span class="icon-emoji">🛡️</span>
+            </div>
+            <h3 class="value-title">Integrity</h3>
+            <p class="value-description">
+              Building trust through transparency and ethical practices
+            </p>
+            <div class="value-accent"></div>
+          </div>
+          <div class="value-card growth">
+            <div class="value-icon">
+              <div class="icon-bg"></div>
+              <span class="icon-emoji">📈</span>
+            </div>
+            <h3 class="value-title">Growth</h3>
+            <p class="value-description">
+              Continuously learning and evolving to stay ahead
+            </p>
+            <div class="value-accent"></div>
+          </div>
+          <div class="value-card diversity">
+            <div class="value-icon">
+              <div class="icon-bg"></div>
+              <span class="icon-emoji">🌈</span>
+            </div>
+            <h3 class="value-title">Diversity</h3>
+            <p class="value-description">
+              Celebrating different perspectives and inclusive innovation
+            </p>
+            <div class="value-accent"></div>
+          </div>
+          <div class="value-card sustainability">
+            <div class="value-icon">
+              <div class="icon-bg"></div>
+              <span class="icon-emoji">🌱</span>
+            </div>
+            <h3 class="value-title">Sustainability</h3>
+            <p class="value-description">
+              Creating solutions that benefit both business and planet
+            </p>
+            <div class="value-accent"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Presence Section -->
+    <section class="global-presence">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge bright">
+            <span class="badge-emoji">🗺️</span>
+            Global Presence
+          </div>
+          <h2 class="section-title">Connecting the World</h2>
+          <p class="section-subtitle">
+            Our global network spans across continents, bringing together
+            diverse talents and perspectives to serve clients worldwide.
+          </p>
+        </div>
+        <div class="presence-grid">
+          <div class="presence-card">
+            <div class="presence-flag">🇺🇸</div>
+            <h3 class="presence-region">North America</h3>
+            <p class="presence-description">
+              Leading innovation hubs in major cities
+            </p>
+            <div class="presence-stats">
+              <span class="presence-stat">15 Offices</span>
+              <span class="presence-stat">2,500+ Team</span>
+            </div>
+          </div>
+          <div class="presence-card">
+            <div class="presence-flag">🇪🇺</div>
+            <h3 class="presence-region">Europe</h3>
+            <p class="presence-description">
+              Creative excellence across diverse markets
+            </p>
+            <div class="presence-stats">
+              <span class="presence-stat">20 Offices</span>
+              <span class="presence-stat">3,200+ Team</span>
+            </div>
+          </div>
+          <div class="presence-card">
+            <div class="presence-flag">🇦🇺</div>
+            <h3 class="presence-region">Asia Pacific</h3>
+            <p class="presence-description">
+              Rapid growth and emerging technologies
+            </p>
+            <div class="presence-stats">
+              <span class="presence-stat">25 Offices</span>
+              <span class="presence-stat">4,100+ Team</span>
+            </div>
+          </div>
+          <div class="presence-card">
+            <div class="presence-flag">🌍</div>
+            <h3 class="presence-region">Global Remote</h3>
+            <p class="presence-description">
+              Distributed talent working seamlessly
+            </p>
+            <div class="presence-stats">
+              <span class="presence-stat">Remote First</span>
+              <span class="presence-stat">1,800+ Team</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="section-badge bright">
+              <span class="badge-emoji">💬</span>
+              Let's Connect
+            </div>
+            <h2 class="contact-title">Ready to Start Something Amazing?</h2>
+            <p class="contact-description">
+              Join thousands of forward-thinking organizations who trust us to
+              bring their boldest ideas to life. Let's create something
+              extraordinary together.
+            </p>
+            <div class="contact-features">
+              <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <span>Quick Response</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🌍</div>
+                <span>Global Reach</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🎯</div>
+                <span>Tailored Solutions</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🏆</div>
+                <span>Proven Results</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form class="bright-form">
+              <div class="form-header">
+                <h3>Get Started Today</h3>
+                <p>
+                  Tell us about your project and we'll get back to you within 24
+                  hours
+                </p>
+              </div>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="John Doe"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="john@company.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Your Company Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="project">Project Type</label>
+                <select id="project" name="project" required>
+                  <option value="">Select project type</option>
+                  <option value="web-development">Web Development</option>
+                  <option value="mobile-app">Mobile Application</option>
+                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="consulting">Consulting</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Project Details</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Tell us about your project goals, timeline, and any specific requirements..."
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn-bright">
+                <span>Start Your Project</span>
+                <div class="btn-icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M6 12L10 8L6 4"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3 class="footer-title">About us</h3>
+          <div class="footer-divider"></div>
+          <p class="footer-text">
+            Edity is a Professional Photo Editing Company in Bangladesh with
+            more than 150 Photoshop professionals. We have 5+ years of
+            experience in photo editing services. We have become one of the
+            fastest-growing photo editing service providers since 2025.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Important Links</h3>
+          <div class="footer-divider"></div>
+          <ul class="footer-links">
+            <li><a href="/about/about.html">About us</a></li>
+            <li><a href="/terms/terms.html">Terms and Conditions</a></li>
+            <li><a href="/privacy/privacy.html">Privacy Policy</a></li>
+            <li><a href="">Data Security Policy</a></li>
+            <li><a href="">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Contact us</h3>
+          <div class="footer-divider"></div>
+          <div class="contact-info">
+            <p>
+              Bangladesh Office 984, Rupatok, Road no.20/1 Basal, Bangladesh
+            </p>
+            <p>
+              Email:
+              <a href="mailto:info@zenithclipping.com"
+                >info@brightimageglobal.com</a
+              >
+            </p>
+            <p>Phone: <a href="tel:+8801681866775">+8801681866775</a></p>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Payment Accepted</h3>
+          <div class="footer-divider"></div>
+          <div class="contact-info">
+            <img src="../assets/untitled-final-300x144-1-1.png.webp" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="center-social-icons social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2025 All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../sharedLayout/navigation/mainNavigation.js"></script>
+  </body>
+</html>

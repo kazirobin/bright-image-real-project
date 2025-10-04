@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright Image Global - Professional Image Editing</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Navigation Styles -->
+    <link
+      rel="stylesheet"
+      href="../../sharedLayout/navigation/mainNavigation.styles.css"
+    />
+    <!-- Footer Styles -->
+    <link rel="stylesheet" href="../../sharedLayout/footer/footer.css" />
+    <link rel="stylesheet" href="../shared/combination/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="/index.html" class="logo-container">
+          <img src="/logo.png" alt="Bright Image Global Logo" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <a href="/index.html" class="nav-link">HOME</a>
+
+          <!-- Services Dropdown -->
+          <div class="dropdown">
+            <button class="nav-link dropdown-btn">
+              Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </button>
+            <div class="dropdown-content services-dropdown">
+              <div class="services-grid">
+                <div class="service-category">
+                  <h3>BASIC EDITING</h3>
+                  <ul>
+                    <li>
+                      <a href="/services/clipping/clipping.html"
+                        >Clipping Path</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/bgRemoval/bgRemoval.html"
+                        >Bg Removal</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/resizing/resizing.html">Resizing</a>
+                    </li>
+                    <li>
+                      <a href="/services/masking/masking.html">Masking</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-category">
+                  <h3>ADVANCE EDITING</h3>
+                  <ul>
+                    <li>
+                      <a href="/services/ecommerceEditing/ecommerceEditing.html"
+                        >E-commerce EDITING</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/services/beauty-retouching/beauty-retouching.html"
+                        >Beauty Retouching</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/jewellery-retouching/jewellery.html"
+                        >Jewelry Retouching</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="/services/realestateEditing/realestateEditing.html"
+                        >Real-Estate Editing</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-category">
+                  <h3>IMAGE MANIPULATION</h3>
+                  <ul>
+                    <li>
+                      <a href="/services/imageMasking/imageMasking.html"
+                        >Image Masking</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/blending/blending.html">Blending</a>
+                    </li>
+                    <li>
+                      <a href="/services/colorAdjustment/colorAdjustment.html"
+                        >Color Adjustment</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/services/imageCombination/imageCombination.html"
+                        >Image combination</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="/projects/projects.html" class="nav-link">Projects</a>
+          <a href="/price/price.html" class="nav-link">Price</a>
+          <a href="/blog/blog.html" class="nav-link">Blog</a>
+          <a href="/contact/contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="cta-section">
+          <a href="/freeTrial/freeTrial.html">
+            <button class="btn btn-yellow">FREE TRIAL</button>
+          </a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <span class="mobile-menu-title">Menu</span>
+        <button class="mobile-menu-close" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="mobile-menu-content">
+        <nav class="mobile-nav">
+          <a href="/index.html" class="mobile-nav-link">HOME</a>
+
+          <!-- Mobile Services Section -->
+          <div class="mobile-dropdown">
+            <button class="mobile-nav-link mobile-dropdown-btn">
+              Services
+              <i class="fas fa-chevron-down mobile-dropdown-icon"></i>
+            </button>
+            <div class="mobile-dropdown-content">
+              <div class="mobile-service-category">
+                <h4>BASIC EDITING</h4>
+                <ul>
+                  <li>
+                    <a href="../clipping/clipping.html">Clipping Path</a>
+                  </li>
+                  <li>
+                    <a href="../bgRemoval/bgRemoval.html">Bg Removal</a>
+                  </li>
+                  <li>
+                    <a href="../resizing/resizing.html">Resizing</a>
+                  </li>
+                  <li><a href="../masking/masking.html">Masking</a></li>
+                </ul>
+              </div>
+
+              <div class="mobile-service-category">
+                <h4>ADVANCE EDITING</h4>
+                <ul>
+                  <li>
+                    <a href="../ecommerceEditing/ecommerceEditing.html"
+                      >E-commerce EDITING</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../beauty-retouching/beauty-retouching.html"
+                      >Beauty Retouching</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../jewellery-retouching/jewellery.html"
+                      >Jewelry Retouching</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../realestateEditing/realestateEditing.html"
+                      >Real-Estate Editing</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mobile-service-category">
+                <h4>IMAGE MANIPULATION</h4>
+                <ul>
+                  <li>
+                    <a href="../masking/masking.html">Image Masking</a>
+                  </li>
+                  <li>
+                    <a href="../blending/blending.html">Blending</a>
+                  </li>
+                  <li>
+                    <a href="../colorAdjustment/colorAdjustment.html"
+                      >Color Adjustment</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../imageCombination/imageCombination.html"
+                      >Image combination</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <a href="/projects/projects.html" class="mobile-nav-link">Projects</a>
+          <a href="/price/price.html" class="mobile-nav-link">Price</a>
+          <a href="/blog/blog.html" class="mobile-nav-link">Blog</a>
+          <a href="/contact/contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+      </div>
+      <div class="mobile-menu-footer">
+        <a href="/freeTrial/freeTrial.html" class="btn btn-yellow mobile-btn"
+          >FREE TRIAL</a
+        >
+      </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+
+      <section id="home" class="clipping-hero">
+        <div class="hero-background"></div>
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <div class="badge">
+                <i class="fas fa-layer-group"></i>
+                Professional Image Combination
+              </div>
+              <h1 class="hero-title">
+                Perfect Image
+                <span class="text-accent">Combination & Compositing</span>
+              </h1>
+              <p class="hero-description">
+                Expert photo compositing, panorama stitching, HDR bracketing,
+                focus stacking, and creative image fusion services. Combine
+                multiple images into stunning single compositions with seamless
+                blending.
+              </p>
+              <div class="hero-buttons">
+                <button class="btn btn-white">
+                  <i class="fas fa-upload"></i>
+                  Start Combining Images
+                </button>
+                <button class="btn btn-outline">
+                  <i class="fas fa-images"></i>
+                  See Combinations
+                </button>
+              </div>
+              <div class="hero-stats">
+                <div class="stat">
+                  <div class="stat-number">15000+</div>
+                  <div class="stat-label">Images Combined</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-number">99%</div>
+                  <div class="stat-label">Seamless Blending</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-number">4h</div>
+                  <div class="stat-label">Average Delivery</div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-image">
+              <div class="combination-demo">
+                <div class="source-images">
+                  <div class="source-image" data-layer="1">
+                    <img
+                      src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=150&fit=crop"
+                      alt="Source 1"
+                    />
+                    <div class="image-label">Image 1</div>
+                  </div>
+                  <div class="source-image" data-layer="2">
+                    <img
+                      src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=200&h=150&fit=crop"
+                      alt="Source 2"
+                    />
+                    <div class="image-label">Image 2</div>
+                  </div>
+                  <div class="source-image" data-layer="3">
+                    <img
+                      src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=200&h=150&fit=crop"
+                      alt="Source 3"
+                    />
+                    <div class="image-label">Image 3</div>
+                  </div>
+                </div>
+                <div class="combination-arrow">
+                  <i class="fas fa-arrow-right"></i>
+                  
+                </div>
+                <div class="result-container">
+                  <div class="combined-result">
+                    <img
+                      src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=350&h=250&fit=crop"
+                      alt="Combined Result"
+                    />
+                    <div class="result-badge">
+                      <i class="fas fa-magic"></i>
+                      &nbsp;Final Image
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- project section  -->
+      <section class="projects-section container">
+        <div class="title">
+          <h1>Our Recent Projects</h1>
+        </div>
+
+        <div class="card-container ">
+          <!-- Card 1 -->
+          <article class="project-card">
+            <div class="combination-demo">
+              <div class="source-images">
+                <div class="source-image" data-layer="1">
+                  <img
+                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=150&fit=crop"
+                    alt="Source 1"
+                  />
+                  <div class="image-label">Image 1</div>
+                </div>
+                <div class="source-image" data-layer="2">
+                  <img
+                    src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=200&h=150&fit=crop"
+                    alt="Source 2"
+                  />
+                  <div class="image-label">Image 2</div>
+                </div>
+                <div class="source-image" data-layer="3">
+                  <img
+                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=200&h=150&fit=crop"
+                    alt="Source 3"
+                  />
+                  <div class="image-label">Image 3</div>
+                </div>
+              </div>
+              <div class="combination-arrow">
+               
+                <i class="fas fa-arrow-right"></i>
+              </div>
+              <div class="result-container">
+                <div class="combined-result">
+                  <img
+                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=350&h=250&fit=crop"
+                    alt="Combined Result"
+                  />
+                 <div class="result-badge">
+                      <i class="fas fa-magic"></i>
+                      &nbsp;Final Image
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              
+              
+              <div class="meta">
+               
+                <a href="#" class="cta-button">Get Started</a>
+              </div>
+            </div>
+          </article>
+          <!-- Card 2 -->
+          <article class="project-card">
+            <div class="combination-demo">
+              <div class="source-images">
+                <div class="source-image" data-layer="1">
+                  <img
+                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=150&fit=crop"
+                    alt="Source 1"
+                  />
+                  <div class="image-label">Image 1</div>
+                </div>
+                <div class="source-image" data-layer="2">
+                  <img
+                    src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=200&h=150&fit=crop"
+                    alt="Source 2"
+                  />
+                  <div class="image-label">Image 2</div>
+                </div>
+                <div class="source-image" data-layer="3">
+                  <img
+                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=200&h=150&fit=crop"
+                    alt="Source 3"
+                  />
+                  <div class="image-label">Image 3</div>
+                </div>
+              </div>
+              <div class="combination-arrow">
+               
+                <i class="fas fa-arrow-right"></i>
+              </div>
+              <div class="result-container">
+                <div class="combined-result">
+                  <img
+                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=350&h=250&fit=crop"
+                    alt="Combined Result"
+                  />
+                 <div class="result-badge">
+                      <i class="fas fa-magic"></i>
+                      &nbsp;Final Image
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              
+              
+              <div class="meta">
+               
+                <a href="#" class="cta-button">Get Started</a>
+              </div>
+            </div>
+          </article>
+          <!-- Card 3 -->
+          <article class="project-card">
+            <div class="combination-demo">
+              <div class="source-images">
+                <div class="source-image" data-layer="1">
+                  <img
+                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=150&fit=crop"
+                    alt="Source 1"
+                  />
+                  <div class="image-label">Image 1</div>
+                </div>
+                <div class="source-image" data-layer="2">
+                  <img
+                    src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=200&h=150&fit=crop"
+                    alt="Source 2"
+                  />
+                  <div class="image-label">Image 2</div>
+                </div>
+                <div class="source-image" data-layer="3">
+                  <img
+                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=200&h=150&fit=crop"
+                    alt="Source 3"
+                  />
+                  <div class="image-label">Image 3</div>
+                </div>
+              </div>
+              <div class="combination-arrow">
+               
+                <i class="fas fa-arrow-right"></i>
+              </div>
+              <div class="result-container">
+                <div class="combined-result">
+                  <img
+                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=350&h=250&fit=crop"
+                    alt="Combined Result"
+                  />
+                 <div class="result-badge">
+                      <i class="fas fa-magic"></i>
+                      &nbsp;Final Image
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              
+              
+              <div class="meta">
+               
+                <a href="#" class="cta-button">Get Started</a>
+              </div>
+            </div>
+          </article>
+          <!-- Card 4 -->
+          <article class="project-card">
+            <div class="combination-demo">
+              <div class="source-images">
+                <div class="source-image" data-layer="1">
+                  <img
+                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=150&fit=crop"
+                    alt="Source 1"
+                  />
+                  <div class="image-label">Image 1</div>
+                </div>
+                <div class="source-image" data-layer="2">
+                  <img
+                    src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=200&h=150&fit=crop"
+                    alt="Source 2"
+                  />
+                  <div class="image-label">Image 2</div>
+                </div>
+                <div class="source-image" data-layer="3">
+                  <img
+                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=200&h=150&fit=crop"
+                    alt="Source 3"
+                  />
+                  <div class="image-label">Image 3</div>
+                </div>
+              </div>
+              <div class="combination-arrow">
+               
+                <i class="fas fa-arrow-right"></i>
+              </div>
+              <div class="result-container">
+                <div class="combined-result">
+                  <img
+                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=350&h=250&fit=crop"
+                    alt="Combined Result"
+                  />
+                 <div class="result-badge">
+                      <i class="fas fa-magic"></i>
+                      &nbsp;Final Image
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              
+              
+              <div class="meta">
+               
+                <a href="#" class="cta-button">Get Started</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <!-- cta style sheet -->
+      <link rel="stylesheet" href="../shared/cta/cta.css" />
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h5 class="subtitle animate-item">Get Started Today</h5>
+            <h2 class="cta-title animate-item">
+              Ready to Transform Your Images?
+            </h2>
+            <p class="cta-description animate-item">
+              Join thousands of satisfied clients who trust us with their image
+              editing needs. Contact us today to discuss your project or get a
+              free quote.
+            </p>
+            <div class="button-group animate-item">
+              <button class="btn btn-primary">Get a Free Quote</button>
+              <button class="btn btn-outline-light">Contact Our Team</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="../shared/cta/cta.js"></script>
+      <!-- Price Section  -->
+      <link rel="stylesheet" href="../shared/pricing/pricing.css" />
+
+      <section class="pricing-section">
+        <div class="container">
+          <!-- Header -->
+          <div class="pricing-header">
+            <h2>Choose the perfect plan for your clipping path needs.</h2>
+            <p>
+              No hidden fees, no surprises. Professional quality at competitive
+              prices with fast turnaround times.
+            </p>
+
+            <!-- Toggle Button -->
+            <div class="pricing-toggle">
+              <span class="toggle-label per-image active">Per Image</span>
+              <div class="toggle-switch">
+                <input
+                  type="checkbox"
+                  id="pricingToggle"
+                  class="toggle-input"
+                />
+                <label for="pricingToggle" class="toggle-slider"></label>
+              </div>
+              <span class="toggle-label bulk-pricing">Bulk Pricing</span>
+              <span class="discount-badge">Save 30%</span>
+            </div>
+          </div>
+
+          <!-- Pricing Cards -->
+          <div class="pricing-cards">
+            <!-- Basic Card -->
+            <div class="pricing-card basic">
+              <div class="card-header">
+                <h3>Basic Clipping</h3>
+                <p>Perfect for simple product photos and basic image editing</p>
+              </div>
+
+              <div class="price-container">
+                <span class="currency">$</span>
+                <span class="price" data-per-image="0.50" data-bulk="0.35"
+                  >0.50</span
+                >
+                <span class="price-unit">per image</span>
+              </div>
+
+              <div class="delivery-time">
+                <span class="delivery-badge">Next 24 Hours (500+ Images)</span>
+              </div>
+
+              <ul class="features-list">
+                <li>✓ Simple product clipping</li>
+                <li>✓ Clean background removal</li>
+                <li>✓ Basic edge refinement</li>
+                <li>✓ 24-hour delivery</li>
+                <li>✓ JPEG/PNG formats</li>
+                <li>✓ Free revisions</li>
+              </ul>
+
+              <button class="cta-button">Get Started</button>
+            </div>
+
+            <!-- Standard Card (Popular) -->
+            <div class="pricing-card standard popular">
+              <div class="popular-badge">MOST POPULAR</div>
+              <div class="card-header">
+                <h3>Standard Clipping</h3>
+                <p>
+                  Ideal for fashion items and products with moderate complexity
+                </p>
+              </div>
+
+              <div class="price-container">
+                <span class="currency">$</span>
+                <span class="price" data-per-image="1.25" data-bulk="0.88"
+                  >1.25</span
+                >
+                <span class="price-unit">per image</span>
+              </div>
+
+              <div class="delivery-time">
+                <span class="delivery-badge">Next 24 Hours (500+ Images)</span>
+              </div>
+
+              <ul class="features-list">
+                <li>✓ Medium complexity clipping</li>
+                <li>✓ Soft/fur edge refinement</li>
+                <li>✓ Shadow creation/removal</li>
+                <li>✓ Color correction</li>
+                <li>✓ 12-hour delivery</li>
+                <li>✓ Free revisions (3x)</li>
+              </ul>
+
+              <button class="cta-button primary">Get Started</button>
+            </div>
+
+            <!-- Premium Card -->
+            <div class="pricing-card premium">
+              <div class="card-header">
+                <h3>Premium Clipping</h3>
+                <p>
+                  For complex jewelry, intricate details, and luxury product
+                  photography
+                </p>
+              </div>
+
+              <div class="price-container">
+                <span class="currency">$</span>
+                <span class="price" data-per-image="2.50" data-bulk="1.75"
+                  >2.50</span
+                >
+                <span class="price-unit">per image</span>
+              </div>
+
+              <div class="delivery-time">
+                <span class="delivery-badge">Next 24 Hours (500+ Images)</span>
+              </div>
+
+              <ul class="features-list">
+                <li>✓ Complex multi-path clipping</li>
+                <li>✓ Jewelry & fine details</li>
+                <li>✓ Advanced retouching</li>
+                <li>✓ Multiple format delivery</li>
+                <li>✓ 6-hour delivery</li>
+                <li>✓ Unlimited revisions</li>
+              </ul>
+
+              <button class="cta-button">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="../shared/pricing/pricing.js"></script>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3 class="footer-title">About us</h3>
+          <div class="footer-divider"></div>
+          <p class="footer-text">
+            Edity is a Professional Photo Editing Company in Bangladesh with
+            more than 150 Photoshop professionals. We have 5+ years of
+            experience in photo editing services. We have become one of the
+            fastest-growing photo editing service providers since 2025.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Important Links</h3>
+          <div class="footer-divider"></div>
+          <ul class="footer-links">
+            <li><a href="/about/about.html">About us</a></li>
+            <li><a href="/terms/terms.html">Terms and Conditions</a></li>
+            <li><a href="/privacy/privacy.html">Privacy Policy</a></li>
+            <li><a href="">Data Security Policy</a></li>
+            <li><a href="">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Contact us</h3>
+          <div class="footer-divider"></div>
+          <div class="contact-info">
+            <p>
+              Bangladesh Office 984, Rupatok, Road no.20/1 Basal, Bangladesh
+            </p>
+            <p>
+              Email:
+              <a href="mailto:info@zenithclipping.com"
+                >info@brightimageglobal.com</a
+              >
+            </p>
+            <p>Phone: <a href="tel:+8801681866775">+8801681866775</a></p>
+          </div>
+        </div>
+         <div class="footer-column">
+          <h3 class="footer-title">Payment Accepted</h3>
+          <div class="footer-divider"></div>
+          <div class="contact-info">
+            <img src="../../assets/untitled-final-300x144-1-1.png.webp" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="social-icons-container">
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2025 All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../../sharedLayout/navigation/mainNavigation.js"></script>
+  </body>
+</html>

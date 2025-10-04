@@ -1,1 +1,0 @@
-# bright-image-real-project
