@@ -6,7 +6,6 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -69,7 +68,6 @@ ul {
 }
 
 .hero-title {
-  font-family: "Playfair Display", serif;
   font-size: 56px;
   font-weight: 700;
   line-height: 1.1;
@@ -123,7 +121,6 @@ ul {
 }
 
 .stat-number {
-  font-family: "Playfair Display", serif;
   font-size: 32px;
   font-weight: 700;
   color: var(--primary-color-light);
@@ -243,7 +240,6 @@ ul {
 }
 
 .section-title {
-  font-family: "Playfair Display", serif;
   font-size: 42px;
   font-weight: 700;
   color: var(--text-color);
@@ -292,7 +288,6 @@ ul {
 }
 
 .feature-title {
-  font-family: "Playfair Display", serif;
   font-size: 22px;
   font-weight: 600;
   color: var(--text-color);
@@ -342,7 +337,6 @@ ul {
 }
 
 .form-title {
-  font-family: "Playfair Display", serif;
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 12px;
@@ -400,7 +394,6 @@ ul {
 }
 
 .selection-title {
-  font-family: "Playfair Display", serif;
   font-size: 24px;
   font-weight: 600;
   color: var(--text-color);
@@ -456,7 +449,6 @@ ul {
 }
 
 .upload-title {
-  font-family: "Playfair Display", serif;
   font-size: 24px;
   font-weight: 600;
   color: var(--text-color);
@@ -485,7 +477,6 @@ ul {
 }
 
 .upload-area h4 {
-  font-family: "Playfair Display", serif;
   font-size: 20px;
   font-weight: 600;
   color: var(--text-color);
@@ -549,7 +540,6 @@ ul {
 }
 
 .benefits-title {
-  font-family: "Playfair Display", serif;
   font-size: 42px;
   font-weight: 700;
   color: var(--text-color);
@@ -582,7 +572,6 @@ ul {
 }
 
 .benefit-title {
-  font-family: "Playfair Display", serif;
   font-size: 20px;
   font-weight: 600;
   color: var(--text-color);
@@ -643,7 +632,6 @@ ul {
 }
 
 .stat-value {
-  font-family: "Playfair Display", serif;
   font-size: 20px;
   font-weight: 700;
   color: var(--text-color);
@@ -777,7 +765,6 @@ ul {
 }
 
 .contact-title {
-  font-family: "Playfair Display", serif;
   font-size: 42px;
   font-weight: 700;
   color: var(--text-color);
@@ -831,7 +818,6 @@ ul {
 }
 
 .contact-form .form-title {
-  font-family: "Playfair Display", serif;
   font-size: 24px;
   font-weight: 600;
   color: var(--text-color);
