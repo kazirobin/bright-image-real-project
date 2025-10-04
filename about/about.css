@@ -332,7 +332,9 @@ body {
   box-shadow: var(--shadow-md);
 }
 
-.badge-emoji { font-size: 16px; }
+.badge-emoji { 
+  font-size: 16px; 
+}
 
 .section-title {
   font-family: "Poppins", sans-serif;
@@ -379,7 +381,10 @@ body {
   transition: var(--transition);
 }
 
-.bright-card:hover::before { transform: scaleX(1); }
+.bright-card:hover::before { 
+  transform: scaleX(1); 
+}
+
 .bright-card:hover {
   transform: translateY(-12px);
   box-shadow: var(--shadow-lg);
@@ -403,11 +408,21 @@ body {
   color: var(--bg-color);
 }
 
-.card-icon-bright.innovation { background: linear-gradient(135deg, var(--color-blue), var(--primary-color)); }
-.card-icon-bright.global { background: linear-gradient(135deg, var(--secondary-color), var(--primary-color-light)); }
-.card-icon-bright.excellence { background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color)); }
+.card-icon-bright.innovation { 
+  background: linear-gradient(135deg, var(--color-blue), var(--primary-color)); 
+}
 
-.bright-card:hover .card-icon-bright { transform: scale(1.1) rotate(5deg); }
+.card-icon-bright.global { 
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color-light)); 
+}
+
+.card-icon-bright.excellence { 
+  background: linear-gradient(135deg, var(--primary-color-light), var(--secondary-color)); 
+}
+
+.bright-card:hover .card-icon-bright { 
+  transform: scale(1.1) rotate(5deg); 
+}
 
 .card-title-bright {
   font-family: "Poppins", sans-serif;
@@ -424,7 +439,10 @@ body {
   margin-bottom: 20px;
 }
 
-.card-footer { display: flex; gap: 8px; }
+.card-footer { 
+  display: flex; 
+  gap: 8px; 
+}
 
 .card-tag {
   padding: 4px 12px;
@@ -433,6 +451,82 @@ body {
   font-size: 12px;
   font-weight: 500;
   border-radius: 12px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .mission {
+    padding: 60px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 50px;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .section-subtitle {
+    font-size: 16px;
+  }
+  
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .bright-card {
+    padding: 30px 24px;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .card-title-bright {
+    font-size: 20px;
+  }
+  
+  .card-description-bright {
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .card-footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission {
+    padding: 50px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .mission-grid {
+    gap: 25px;
+    padding: 0 15px;
+  }
+  
+  .bright-card {
+    padding: 25px 20px;
+  }
+  
+  .card-icon-bright {
+    width: 50px;
+    height: 50px;
+  }
 }
 /* ===== MISSION SECTION END ===== */
 
