@@ -99,8 +99,8 @@ ul {
 }
 
 .hero-text {
-  flex: 1 1 500px;
-  min-width: 320px;
+  flex: 1.3 1.4 600px;
+  min-width: 520px;
 }
 
 .badge {
@@ -119,7 +119,7 @@ ul {
 }
 
 .hero-title {
-  font-size: clamp(32px, 5vw, 48px);
+  font-size: clamp(32px, 5vw, 38px);
   line-height: 1.2;
   margin-bottom: 20px;
   color: var(--bg-color);
