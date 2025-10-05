@@ -94,7 +94,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
+  gap: 100px;
   
 }
 
@@ -203,6 +203,7 @@ ul {
 } */
 
 .hero-image {
+  padding: 40px 0px 40px 160px;
   flex: 1 1 50%;
   min-width: 320px;
   height: 60vh;
@@ -382,6 +383,9 @@ ul {
   .hero-stats {
     justify-content: center;
   }
+  .hero-image{
+    padding: 0 !important;
+  }
 
 }
 
@@ -392,6 +396,7 @@ ul {
 
   .hero-image .card {
     width: 80%;
+    padding: 0px !important;
   }
 
   .hero-content {
