@@ -704,12 +704,9 @@ section {
 .nav-btn:hover {
   background: var(--primary-color, #3b82f6);
   color: var(--white);
-  transform: scale(1.1);
 }
 
-.nav-btn:active {
-  transform: scale(0.95);
-}
+
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
