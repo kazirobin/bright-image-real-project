@@ -280,6 +280,9 @@ ul {
   padding: 16px;
   display: flex;
   flex-direction: column;
+  div{
+    padding-inline: 10px;
+  }
 }
 .card-content h3 {
   font-size: 1.2rem;
@@ -294,10 +297,10 @@ ul {
   font-size: 0.9rem;
   color: #555;
   flex: 1;
+  padding-block: 20px;
 }
 
 .cta-button {
-  align-self: flex-start;
   display: inline-block;
   padding: 12px 24px;
   background-color: #0078d4;
