@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Drag and drop functionality
         uploadArea.addEventListener('dragover', function(e) {
             e.preventDefault();
-            uploadArea.style.borderColor = var('--primary-color');
+            uploadArea.style.borderColor = 'var(--primary-color)';
             uploadArea.style.backgroundColor = 'rgba(60, 9, 108, 0.1)';
         });
         
@@ -126,4 +126,369 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (e.dataTransfer.files && e.dataTransfer.files[0]) {
                 imageUpload.files = e.dataTransfer.files;
-                const event = new Event('change', {
+                const event = new Event('change');
+                imageUpload.dispatchEvent(event);
+            }
+        });
+    }
+    
+    // Form submission handling
+    const trialForm = document.querySelector('.free-trial-form');
+    if (trialForm) {
+        trialForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            
+            if (!name || !email || !service) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            if (!imageUpload.files || imageUpload.files.length === 0) {
+                alert('Please upload an image for your free trial');
+                return;
+            }
+            
+            // Show loading state
+            const submitBtn = trialForm.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(function() {
+                // Show success message
+                alert('Thank you! Your free trial request has been submitted. We will process your image within 24 hours and email you the results.');
+                
+                // Reset form
+                trialForm.reset();
+                if (fileInfo) fileInfo.style.display = 'none';
+                if (uploadArea) {
+                    uploadArea.style.borderColor = '#ddd';
+                    uploadArea.style.backgroundColor = '';
+                }
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+    }
+    
+    // Additional services toggle functionality
+    const showMoreBtn = document.getElementById('trialShowMoreBtn');
+    const additionalServices = document.getElementById('trialAdditionalServices');
+    
+    if (showMoreBtn && additionalServices) {
+        showMoreBtn.addEventListener('click', function() {
+            additionalServices.classList.toggle('active');
+            this.classList.toggle('active');
+            
+            // Update button text
+            const span = this.querySelector('span');
+            if (additionalServices.classList.contains('active')) {
+                span.textContent = 'Hide Additional Services';
+            } else {
+                span.textContent = 'View All Services';
+            }
+        });
+    }
+    
+    // Learn more buttons functionality
+    const learnMoreBtns = document.querySelectorAll('.trial-learn-more-btn');
+    learnMoreBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const category = this.closest('.trial-service-category');
+            const categoryTitle = category.querySelector('h3').textContent;
+            
+            // Show service details modal or navigate to service page
+            alert(`You clicked Learn More for ${categoryTitle}. This would typically navigate to a detailed service page.`);
+        });
+    });
+    
+    // Service items click functionality
+    const serviceItems = document.querySelectorAll('.trial-service-item');
+    serviceItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const serviceName = this.querySelector('strong').textContent;
+            
+            // Highlight selected service
+            serviceItems.forEach(i => i.classList.remove('selected'));
+            this.classList.add('selected');
+            
+            // Auto-select the service in the form dropdown if it exists
+            const serviceSelect = document.getElementById('service');
+            if (serviceSelect) {
+                const serviceValue = serviceName.toLowerCase().replace(':', '').replace(/\s+/g, '-');
+                for (let option of serviceSelect.options) {
+                    if (option.value === serviceValue) {
+                        serviceSelect.value = serviceValue;
+                        break;
+                    }
+                }
+            }
+            
+            // Scroll to form section
+            const formSection = document.getElementById('trial-form');
+            if (formSection) {
+                formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+    
+    // Service selection in form
+    const serviceSelect = document.getElementById('service');
+    if (serviceSelect) {
+        serviceSelect.addEventListener('change', function() {
+            const selectedService = this.options[this.selectedIndex].text;
+            
+            // Update service items highlighting
+            serviceItems.forEach(item => {
+                const itemService = item.querySelector('strong').textContent.replace(':', '');
+                if (itemService.includes(selectedService) || selectedService.includes(itemService)) {
+                    item.classList.add('selected');
+                } else {
+                    item.classList.remove('selected');
+                }
+            });
+        });
+    }
+    
+    // Price calculator functionality (optional)
+    const priceCalculator = document.getElementById('priceCalculator');
+    if (priceCalculator) {
+        priceCalculator.addEventListener('change', function() {
+            calculatePrice();
+        });
+    }
+    
+    function calculatePrice() {
+        // This would calculate price based on service type, image complexity, etc.
+        console.log('Price calculation would happen here');
+    }
+    
+    // Animation on scroll for service cards
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe service cards for animation
+    const serviceCards = document.querySelectorAll('.trial-service-category');
+    serviceCards.forEach(card => {
+        observer.observe(card);
+    });
+    
+    // Add CSS for selected state
+    const style = document.createElement('style');
+    style.textContent = `
+        .trial-service-item.selected {
+            border-left-color: var(--accent-color) !important;
+            background: rgba(76, 201, 240, 0.1) !important;
+            transform: translateX(10px) !important;
+            box-shadow: 0 8px 20px rgba(76, 201, 240, 0.2) !important;
+        }
+        
+        .trial-service-item.selected::before {
+            background: linear-gradient(90deg, transparent, rgba(76, 201, 240, 0.2), transparent) !important;
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .fa-spin {
+            animation: spin 1s linear infinite;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Initialize tooltips for service items
+    serviceItems.forEach(item => {
+        item.title = 'Click to select this service for your free trial';
+    });
+    
+    // Add keyboard navigation for service items
+    serviceItems.forEach((item, index) => {
+        item.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+            
+            // Arrow key navigation
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                e.preventDefault();
+                const nextIndex = (index + 1) % serviceItems.length;
+                serviceItems[nextIndex].focus();
+            }
+            
+            if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                const prevIndex = (index - 1 + serviceItems.length) % serviceItems.length;
+                serviceItems[prevIndex].focus();
+            }
+        });
+        
+        // Make service items focusable
+        item.setAttribute('tabindex', '0');
+    });
+    
+    // Auto-focus first service item
+    if (serviceItems.length > 0) {
+        serviceItems[0].focus();
+    }
+    
+    // Add service category filtering (optional enhancement)
+    const filterButtons = document.querySelectorAll('.trial-filter-btn');
+    if (filterButtons.length > 0) {
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active filter button
+                filterButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter service categories
+                serviceCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+    
+    // Add image preview functionality
+    if (imageUpload) {
+        imageUpload.addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                const file = this.files[0];
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    // Create image preview
+                    const preview = document.createElement('img');
+                    preview.src = e.target.result;
+                    preview.style.maxWidth = '200px';
+                    preview.style.maxHeight = '200px';
+                    preview.style.borderRadius = '8px';
+                    preview.style.marginTop = '10px';
+                    
+                    // Remove existing preview
+                    const existingPreview = uploadArea.querySelector('img');
+                    if (existingPreview) {
+                        existingPreview.remove();
+                    }
+                    
+                    uploadArea.appendChild(preview);
+                };
+                
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+    
+    // Add form validation styling
+    const formInputs = document.querySelectorAll('.free-trial-form input, .free-trial-form select, .free-trial-form textarea');
+    formInputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            if (this.value.trim() === '' && this.hasAttribute('required')) {
+                this.style.borderColor = '#dc3545';
+            } else {
+                this.style.borderColor = '#28a745';
+            }
+        });
+        
+        input.addEventListener('input', function() {
+            if (this.value.trim() !== '') {
+                this.style.borderColor = '#28a745';
+            }
+        });
+    });
+    
+    // Add character counter for instructions textarea
+    const instructionsTextarea = document.getElementById('instructions');
+    if (instructionsTextarea) {
+        const counter = document.createElement('div');
+        counter.className = 'character-counter';
+        counter.style.fontSize = '0.8rem';
+        counter.style.color = '#666';
+        counter.style.textAlign = 'right';
+        counter.style.marginTop = '5px';
+        
+        instructionsTextarea.parentNode.appendChild(counter);
+        
+        instructionsTextarea.addEventListener('input', function() {
+            const remaining = 500 - this.value.length;
+            counter.textContent = `${remaining} characters remaining`;
+            
+            if (remaining < 50) {
+                counter.style.color = '#dc3545';
+            } else if (remaining < 100) {
+                counter.style.color = '#ffc107';
+            } else {
+                counter.style.color = '#666';
+            }
+        });
+        
+        // Initialize counter
+        instructionsTextarea.dispatchEvent(new Event('input'));
+    }
+});
+
+// Export functions for potential reuse
+window.FreeTrialJS = {
+    init: function() {
+        // Re-initialize if needed
+        document.dispatchEvent(new Event('DOMContentLoaded'));
+    },
+    
+    resetForm: function() {
+        const form = document.querySelector('.free-trial-form');
+        if (form) {
+            form.reset();
+            const fileInfo = document.getElementById('fileInfo');
+            if (fileInfo) fileInfo.style.display = 'none';
+            const uploadArea = document.getElementById('uploadArea');
+            if (uploadArea) {
+                uploadArea.style.borderColor = '#ddd';
+                uploadArea.style.backgroundColor = '';
+                const preview = uploadArea.querySelector('img');
+                if (preview) preview.remove();
+            }
+        }
+    },
+    
+    selectService: function(serviceName) {
+        const serviceItems = document.querySelectorAll('.trial-service-item');
+        serviceItems.forEach(item => {
+            const itemService = item.querySelector('strong').textContent;
+            if (itemService.includes(serviceName)) {
+                item.click();
+            }
+        });
+    }
+};
