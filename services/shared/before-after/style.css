@@ -95,7 +95,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   gap: 50px;
-  flex-wrap: wrap;
+  
 }
 
 .hero-text {
@@ -368,7 +368,7 @@ ul {
 /* ================================
    Responsive Tweaks
 ================================= */
-@media (max-width: 992px) {
+@media (max-width: 700px) {
   .hero-content {
     flex-direction: column;
     text-align: center;
