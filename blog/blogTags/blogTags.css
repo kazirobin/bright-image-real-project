@@ -523,6 +523,7 @@
 
         .blog-footer {
             display: flex;
+            margin-top: auto;
             justify-content: space-between;
             align-items: center;
         }

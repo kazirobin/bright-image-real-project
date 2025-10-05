@@ -28,7 +28,7 @@
                 readTime: '8 min read',
                 author: {
                     name: 'John Smith',
-                    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=30&h=30&fit=crop&crop=face'
+                    avatar: '../../assets/profile.png'
                 },
                 stats: {
                     views: '2.4k',
@@ -46,7 +46,7 @@
                 readTime: '5 min read',
                 author: {
                     name: 'Sarah Johnson',
-                    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=30&h=30&fit=crop&crop=face'
+                    avatar: '../../assets/profile.png'
                 },
                 stats: {
                     views: '1.2k',
@@ -64,7 +64,7 @@
                 readTime: '7 min read',
                 author: {
                     name: 'Mike Chen',
-                    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop&crop=face'
+                    avatar: '../../assets/profile.png'
                 },
                 stats: {
                     views: '956',
@@ -82,7 +82,7 @@
                 readTime: '6 min read',
                 author: {
                     name: 'Emma Davis',
-                    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=30&h=30&fit=crop&crop=face'
+                    avatar: '../../assets/profile.png'
                 },
                 stats: {
                     views: '743',
@@ -100,7 +100,7 @@
                 readTime: '10 min read',
                 author: {
                     name: 'David Wilson',
-                    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=30&h=30&fit=crop&crop=face'
+                    avatar: '../../assets/profile.png'
                 },
                 stats: {
                     views: '1.8k',
@@ -118,7 +118,7 @@
                 readTime: '8 min read',
                 author: {
                     name: 'John Smith',
-                    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=30&h=30&fit=crop&crop=face'
+                    avatar: '../../assets/profile.png'
                 },
                 stats: {
                     views: '2.1k',
@@ -136,7 +136,7 @@
                 readTime: '6 min read',
                 author: {
                     name: 'Sarah Johnson',
-                    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=30&h=30&fit=crop&crop=face'
+                    avatar: '../../assets/profile.png'
                 },
                 stats: {
                     views: '834',
@@ -154,7 +154,7 @@
                 readTime: '9 min read',
                 author: {
                     name: 'Lisa Brown',
-                    avatar: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=30&h=30&fit=crop&crop=face'
+                    avatar: '../../assets/profile.png'
                 },
                 stats: {
                     views: '1.1k',
