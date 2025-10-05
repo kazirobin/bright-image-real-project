@@ -19,7 +19,6 @@
     />
     <!-- Footer Styles -->
     <link rel="stylesheet" href="../../sharedLayout/footer/footer.css" />
-    <link rel="stylesheet" href="../shared/combination/style.css" />
   </head>
   <body>
     <!-- Navigation Header -->
@@ -244,6 +243,9 @@
     <main>
       <!-- Hero Section -->
 
+         <link rel="stylesheet" href="../shared/before-after/style.css" />
+
+      <!-- Hero Section -->
       <section id="home" class="clipping-hero">
         <div class="hero-background"></div>
         <div class="container">
@@ -288,226 +290,129 @@
                 </div>
               </div>
             </div>
+
             <div class="hero-image">
-              <div class="combination-demo">
-                <div class="source-images">
-                  <div class="source-image" data-layer="1">
-                    <img
-                      src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=150&fit=crop"
-                      alt="Source 1"
-                    />
-                    <div class="image-label">Image 1</div>
-                  </div>
-                  <div class="source-image" data-layer="2">
-                    <img
-                      src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=200&h=150&fit=crop"
-                      alt="Source 2"
-                    />
-                    <div class="image-label">Image 2</div>
-                  </div>
-                  <div class="source-image" data-layer="3">
-                    <img
-                      src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=200&h=150&fit=crop"
-                      alt="Source 3"
-                    />
-                    <div class="image-label">Image 3</div>
-                  </div>
-                </div>
-                <div class="combination-arrow">
-                  <i class="fas fa-arrow-right"></i>
-                  <div class="arrow-label">Combining</div>
-                </div>
-                <div class="result-container">
-                  <div class="combined-result">
-                    <img
-                      src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=350&h=250&fit=crop"
-                      alt="Combined Result"
-                    />
-                    <div class="result-badge">
-                      <i class="fas fa-magic"></i>
-                      Combined
-                    </div>
-                  </div>
+              <div class="card">
+                <div
+                  class="image-compare"
+                  onmousemove="reveal(event, this)"
+                  ontouchmove="reveal(event, this)"
+                >
+                  <img
+                    src="../../assets/clipping/clipi_1.jpg"
+                    class="before"
+                    alt="Before"
+                  />
+                  <img
+                    src="../../assets/clipping/clip_1.jpg"
+                    class="after"
+                    alt="After"
+                  />
+                  <div class="mask"></div>
+                  <span class="label after-label">After</span>
+                  <span class="label before-label">Before</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- project section  -->
+
+      <!-- Projects Section -->
       <section class="projects-section">
         <div class="title">
-          <h1>Our Recent Projects</h1>
+          <h1>Our Some Recent Projects</h1>
         </div>
+        <div class="card-container">
+          <!-- Repeat Card Pattern -->
+          <div class="card">
+            <div
+              class="image-compare"
+              onmousemove="reveal(event, this)"
+              ontouchmove="reveal(event, this)"
+            >
+              <img
+                src="../../assets/clipping/clipi_1.jpg"
+                class="before"
+                alt="Before"
+              />
+              <img
+                src="../../assets/clipping/clip_1.jpg"
+                class="after"
+                alt="After"
+              />
+              <div class="mask"></div>
+              <span class="label after-label">After</span>
+              <span class="label before-label">Before</span>
+            </div>
+            <div class="card-content">
+              <h3>Basic Clipping Path</h3>
+              <p class="price">$0.49</p>
+              <p class="desc">Ideal for basic shapes and straight edges.</p>
+              <div><a href="#" class="cta-button">Get Started</a></div>
+            </div>
+          </div>
+          <!-- Repeat Card Pattern -->
+          <div class="card">
+            <div
+              class="image-compare"
+              onmousemove="reveal(event, this)"
+              ontouchmove="reveal(event, this)"
+            >
+              <img
+                src="../../assets/clipping/clipi_1.jpg"
+                class="before"
+                alt="Before"
+              />
+              <img
+                src="../../assets/clipping/clip_1.jpg"
+                class="after"
+                alt="After"
+              />
+              <div class="mask"></div>
+              <span class="label after-label">After</span>
+              <span class="label before-label">Before</span>
+            </div>
+            <div class="card-content">
+              <h3>Basic Clipping Path</h3>
+              <p class="price">$0.49</p>
+              <p class="desc">Ideal for basic shapes and straight edges.</p>
+              <div><a href="#" class="cta-button">Get Started</a></div>
+            </div>
+          </div>
+          <!-- Repeat Card Pattern -->
+          <div class="card">
+            <div
+              class="image-compare"
+              onmousemove="reveal(event, this)"
+              ontouchmove="reveal(event, this)"
+            >
+              <img
+                src="../../assets/clipping/clipi_1.jpg"
+                class="before"
+                alt="Before"
+              />
+              <img
+                src="../../assets/clipping/clip_1.jpg"
+                class="after"
+                alt="After"
+              />
+              <div class="mask"></div>
+              <span class="label after-label">After</span>
+              <span class="label before-label">Before</span>
+            </div>
+            <div class="card-content">
+              <h3>Basic Clipping Path</h3>
+              <p class="price">$0.49</p>
+              <p class="desc">Ideal for basic shapes and straight edges.</p>
+              <div><a href="#" class="cta-button">Get Started</a></div>
+            </div>
+          </div>
 
-        <div class="card-container container">
-          <!-- Card 1 -->
-          <article class="project-card">
-            <div class="combination-demo">
-              <div class="source-images">
-                <div class="source-image" data-layer="1">
-                  <img
-                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=150&fit=crop"
-                    alt="Source 1"
-                  />
-                  <div class="image-label">Image 1</div>
-                </div>
-                <div class="source-image" data-layer="2">
-                  <img
-                    src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=200&h=150&fit=crop"
-                    alt="Source 2"
-                  />
-                  <div class="image-label">Image 2</div>
-                </div>
-                <div class="source-image" data-layer="3">
-                  <img
-                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=200&h=150&fit=crop"
-                    alt="Source 3"
-                  />
-                  <div class="image-label">Image 3</div>
-                </div>
-              </div>
-              <div class="combination-arrow">
-                <div class="arrow-label">Combining</div>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-              <div class="result-container">
-                <div class="combined-result">
-                  <img
-                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=350&h=250&fit=crop"
-                    alt="Combined Result"
-                  />
-                  <div class="result-badge">
-                    <i class="fas fa-magic"></i>
-                    Combined
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-content">
-              <h3>Composite Transformation</h3>
-              <p class="desc">
-                Merged three inputs into a single polished e‑commerce hero shot
-                with cleaned edges and color balance.
-              </p>
-              <div class="meta">
-                <span class="price">$1.29</span>
-                <a href="#" class="cta-button">Get Started</a>
-              </div>
-            </div>
-          </article>
-          <!-- Card 2 -->
-          <article class="project-card">
-            <div class="combination-demo">
-              <div class="source-images">
-                <div class="source-image" data-layer="1">
-                  <img
-                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=150&fit=crop"
-                    alt="Source 1"
-                  />
-                  <div class="image-label">Image 1</div>
-                </div>
-                <div class="source-image" data-layer="2">
-                  <img
-                    src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=200&h=150&fit=crop"
-                    alt="Source 2"
-                  />
-                  <div class="image-label">Image 2</div>
-                </div>
-                <div class="source-image" data-layer="3">
-                  <img
-                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=200&h=150&fit=crop"
-                    alt="Source 3"
-                  />
-                  <div class="image-label">Image 3</div>
-                </div>
-              </div>
-              <div class="combination-arrow">
-                <div class="arrow-label">Combining</div>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-              <div class="result-container">
-                <div class="combined-result">
-                  <img
-                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=350&h=250&fit=crop"
-                    alt="Combined Result"
-                  />
-                  <div class="result-badge">
-                    <i class="fas fa-magic"></i>
-                    Combined
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-content">
-              <h3>Composite Transformation</h3>
-              <p class="desc">
-                Merged three inputs into a single polished e‑commerce hero shot
-                with cleaned edges and color balance.
-              </p>
-              <div class="meta">
-                <span class="price">$1.29</span>
-                <a href="#" class="cta-button">Get Started</a>
-              </div>
-            </div>
-          </article>
-          <!-- Card 2 -->
-          <article class="project-card">
-            <div class="combination-demo">
-              <div class="source-images">
-                <div class="source-image" data-layer="1">
-                  <img
-                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=150&fit=crop"
-                    alt="Source 1"
-                  />
-                  <div class="image-label">Image 1</div>
-                </div>
-                <div class="source-image" data-layer="2">
-                  <img
-                    src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=200&h=150&fit=crop"
-                    alt="Source 2"
-                  />
-                  <div class="image-label">Image 2</div>
-                </div>
-                <div class="source-image" data-layer="3">
-                  <img
-                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=200&h=150&fit=crop"
-                    alt="Source 3"
-                  />
-                  <div class="image-label">Image 3</div>
-                </div>
-              </div>
-              <div class="combination-arrow">
-                <div class="arrow-label">Combining</div>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-              <div class="result-container">
-                <div class="combined-result">
-                  <img
-                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=350&h=250&fit=crop"
-                    alt="Combined Result"
-                  />
-                  <div class="result-badge">
-                    <i class="fas fa-magic"></i>
-                    Combined
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-content">
-              <h3>Composite Transformation</h3>
-              <p class="desc">
-                Merged three inputs into a single polished e‑commerce hero shot
-                with cleaned edges and color balance.
-              </p>
-              <div class="meta">
-                <span class="price">$1.29</span>
-                <a href="#" class="cta-button">Get Started</a>
-              </div>
-            </div>
-          </article>
+          <!-- Copy more cards (2-6) with updated content -->
         </div>
       </section>
+      <script src="../shared/before-after/script.js"></script>
       <!-- CTA Section -->
       <!-- cta style sheet -->
       <link rel="stylesheet" href="../shared/cta/cta.css" />
