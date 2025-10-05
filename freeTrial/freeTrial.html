@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bright Image Global - Professional Image Editing</title>
+    <title>Free Trial - Bright Image Global</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
-       <!-- Navigation Header -->
+    <!-- Navigation Header -->
     <header class="navbar">
       <div class="nav-container">
         <!-- Logo -->
@@ -135,7 +135,7 @@
           <a href="../contact/contact.html" class="nav-link">Contact</a>
         </nav>
 
-           <div class="">
+        <div class="">
           <a href="../freeTrial/freeTrial.html">
             <button class="btn btn-yellow">FREE TRIAL</button>
           </a>
@@ -226,7 +226,7 @@
                   <li>
                     <a href="../services/colorAdjustment/colorAdjustment.html"
                       >Color Adjustment</a
-                    >
+                      >
                   </li>
                   <li>
                     <a href="../services/imageCombination/imageCombination.html"
@@ -251,499 +251,213 @@
       </div>
     </div>
 
-
-    <!-- Hero Section -->
-    <!-- <section class="hero-section">
+    <!-- Free Trial Hero Section -->
+    <section class="free-trial-hero">
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <div class="hero-badge">
-              <i class="fas fa-crown"></i>
-              <span>Exclusive Premium Trial</span>
+            <div class="trial-badge">
+              <i class="fas fa-gift"></i>
+              FREE TRIAL OFFER
             </div>
             <h1 class="hero-title">
-              Experience <span class="gradient-text">Luxury</span><br />
-              Photo Editing <span class="highlight-text">Free</span>
+              Experience Professional <span class="text-accent">Image Editing</span> For Free
             </h1>
-            <p class="hero-subtitle">
-              Unlock professional-grade retouching with our exclusive 7-day
-              premium trial. Transform your images with museum-quality
-              precision.
+            <p class="hero-description">
+              Get one image professionally edited with our premium services. No credit card required. 
+              See the difference our expert editors can make to your photos.
             </p>
             <div class="hero-stats">
-              <div class="stat-item">
-                <div class="stat-number">50K+</div>
-                <div class="stat-label">Images Enhanced</div>
+              <div class="stat">
+                <div class="stat-number">24h</div>
+                <div class="stat-label">Delivery Time</div>
               </div>
-              <div class="stat-item">
-                <div class="stat-number">99%</div>
+              <div class="stat">
+                <div class="stat-number">100%</div>
                 <div class="stat-label">Satisfaction</div>
               </div>
-              <div class="stat-item">
-                <div class="stat-number">24h</div>
-                <div class="stat-label">Delivery</div>
+              <div class="stat">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Free Image</div>
               </div>
             </div>
-            <button class="premium-btn">
-              <span>Start Premium Trial</span>
-              <i class="fas fa-arrow-right"></i>
-            </button>
+            <div class="hero-buttons">
+              <a href="#trial-form" class="btn btn-primary">
+                <i class="fas fa-upload"></i>
+                Upload Your Image
+              </a>
+              <button class="btn btn-outline">
+                <i class="fas fa-play-circle"></i>
+                How It Works
+              </button>
+            </div>
           </div>
-          <div class="hero-visual">
-            <div class="trial-preview">
-              <div class="preview-header">
-                <div class="preview-title">Premium Editor</div>
-              </div>
-              <div class="before-after">
-                <div class="image-panel">
-                  <div class="panel-label">Before</div>
-                  <img
-                    src="../assets/clipping/clip_1.jpg"
-                    alt="Before editing"
-                  />
-                </div>
-                <div class="vs-divider">VS</div>
-                <div class="image-panel">
-                  <div class="panel-label">After</div>
-                  <img
-                    src="../assets/clipping/clipi_1.jpg"
-                    alt="After editing"
-                  />
-                </div>
-              </div>
-            </div>
+          <div class="hero-image">
+            <div
+          class="image-compare"
+          onmousemove="reveal(event, this)"
+          ontouchmove="reveal(event, this)"
+        >
+          <img src="../../../assets/clipping/clipi_1.jpg" class="before" alt="Before" />
+          <img src="../../../assets/clipping/clip_1.jpg" class="after" alt="After" />
+          <div class="mask"></div>
+          <span class="label after-label">After</span>
+          <span class="label before-label">Before</span>
+        </div>
           </div>
         </div>
       </div>
-    </section> -->
-
-    <!-- Features Section -->
-    <!-- <section class="features-section">
+    </section>
+<link rel="stylesheet" href="../services/shared/before-after/style.css">
+<script src="../services/shared/before-after/script.js"></script>
+    <!-- Services Overview Section -->
+    <section class="services-overview">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Premium Features Included</h2>
-          <p class="section-subtitle">
-            Experience the full power of professional photo editing
-          </p>
+          <h2>Our Professional Image Services</h2>
+          <p>Choose from our wide range of professional image editing services</p>
         </div>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-palette"></i>
-            </div>
-            <h3 class="feature-title">Advanced Color Grading</h3>
-            <p class="feature-desc">
-              Professional color correction with cinema-grade tools
-            </p>
-            <div class="feature-badge">Premium</div>
+        <div class="services-grid">
+          <div class="service-category">
+            <h3><i class="fas fa-edit"></i> BASIC EDITING</h3>
+            <ul>
+              <li><strong>Clipping Path:</strong> Precise object isolation with clean edges</li>
+              <li><strong>Background Removal:</strong> Clean, professional background removal</li>
+              <li><strong>Resizing:</strong> Optimize images for any platform</li>
+              <li><strong>Masking:</strong> Advanced masking for complex objects</li>
+            </ul>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-magic"></i>
-            </div>
-            <h3 class="feature-title">AI-Powered Retouching</h3>
-            <p class="feature-desc">
-              Intelligent skin smoothing and blemish removal
-            </p>
-            <div class="feature-badge">Exclusive</div>
+          
+          <div class="service-category">
+            <h3><i class="fas fa-magic"></i> ADVANCED EDITING</h3>
+            <ul>
+              <li><strong>E-commerce Editing:</strong> Product images optimized for online sales</li>
+              <li><strong>Beauty Retouching:</strong> Professional portrait enhancement</li>
+              <li><strong>Jewelry Retouching:</strong> Make jewelry sparkle and stand out</li>
+              <li><strong>Real Estate Editing:</strong> Enhance property photos</li>
+            </ul>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-layer-group"></i>
-            </div>
-            <h3 class="feature-title">Professional Masking</h3>
-            <p class="feature-desc">
-              Precision masking for complex compositions
-            </p>
-            <div class="feature-badge">Pro</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-cloud-upload-alt"></i>
-            </div>
-            <h3 class="feature-title">Cloud Processing</h3>
-            <p class="feature-desc">
-              High-speed rendering with unlimited storage
-            </p>
-            <div class="feature-badge">Elite</div>
+          
+          <div class="service-category">
+            <h3><i class="fas fa-cogs"></i> IMAGE MANIPULATION</h3>
+            <ul>
+              <li><strong>Image Masking:</strong> Complex selections for detailed editing</li>
+              <li><strong>Blending:</strong> Seamlessly blend multiple images</li>
+              <li><strong>Color Adjustment:</strong> Perfect color correction</li>
+              <li><strong>Image Combination:</strong> Create stunning composite images</li>
+            </ul>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- Trial Form Section -->
-    <section class="form-section">
+    <!-- Free Trial Form Section -->
+    <section id="trial-form" class="trial-form-section">
       <div class="container">
         <div class="form-container">
           <div class="form-header">
-            <h2 class="form-title">Start Your Premium Experience</h2>
-            <p class="form-subtitle">
-              Join thousands of professionals who trust EditY Studio
-            </p>
+            <h2>Claim Your Free Image Edit</h2>
+            <p>Fill out the form below and upload your image. We'll process it within 24 hours.</p>
           </div>
-          <form class="trial-form">
-            <div class="form-grid">
+          
+          <form class="free-trial-form">
+            <div class="form-row">
               <div class="form-group">
-                <label class="form-label">First Name</label>
-                <input
-                  type="text"
-                  class="form-input"
-                  placeholder="Enter your first name"
-                  required
-                />
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
               </div>
               <div class="form-group">
-                <label class="form-label">Last Name</label>
-                <input
-                  type="text"
-                  class="form-input"
-                  placeholder="Enter your last name"
-                  required
-                />
-              </div>
-              <div class="form-group full-width">
-                <label class="form-label">Email Address</label>
-                <input
-                  type="email"
-                  class="form-input"
-                  placeholder="Enter your email address"
-                  required
-                />
-              </div>
-              <div class="form-group full-width">
-                <label class="form-label">Company (Optional)</label>
-                <input
-                  type="text"
-                  class="form-input"
-                  placeholder="Enter your company name"
-                />
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
               </div>
             </div>
-
-            <div class="service-selection">
-              <h3 class="selection-title">Choose Your Service Type</h3>
-              <div class="service-grid">
-                <div class="service-card" data-service="portrait">
-                  <div class="service-icon">
-                    <i class="fas fa-user"></i>
-                  </div>
-                  <h4 class="service-name">Portrait Retouching</h4>
-                </div>
-                <div class="service-card" data-service="product">
-                  <div class="service-icon">
-                    <i class="fas fa-box"></i>
-                  </div>
-                  <h4 class="service-name">Product Photography</h4>
-                </div>
-                <div class="service-card" data-service="fashion">
-                  <div class="service-icon">
-                    <i class="fas fa-tshirt"></i>
-                  </div>
-                  <h4 class="service-name">Fashion & Lifestyle</h4>
-                </div>
-                <div class="service-card" data-service="real-estate">
-                  <div class="service-icon">
-                    <i class="fas fa-home"></i>
-                  </div>
-                  <h4 class="service-name">Real Estate</h4>
-                </div>
-              </div>
+            
+            <div class="form-group">
+              <label for="service">Select Service *</label>
+              <select id="service" name="service" required>
+                <option value="">Choose a service</option>
+                <option value="clipping-path">Clipping Path</option>
+                <option value="bg-removal">Background Removal</option>
+                <option value="resizing">Image Resizing</option>
+                <option value="masking">Image Masking</option>
+                <option value="ecommerce">E-commerce Editing</option>
+                <option value="beauty">Beauty Retouching</option>
+                <option value="jewelry">Jewelry Retouching</option>
+                <option value="real-estate">Real Estate Editing</option>
+                <option value="color-adjustment">Color Adjustment</option>
+                <option value="image-combination">Image Combination</option>
+              </select>
             </div>
-
+            
+            <div class="form-group">
+              <label for="instructions">Special Instructions</label>
+              <textarea id="instructions" name="instructions" rows="4" placeholder="Any specific requirements for your image?"></textarea>
+            </div>
+            
             <div class="upload-section">
-              <h3 class="upload-title">Upload Sample Images</h3>
-              <div class="upload-area">
-                <div class="upload-icon">
-                  <i class="fas fa-cloud-upload-alt"></i>
-                </div>
-                <h4>Drag & Drop Your Images</h4>
-                <p>Or click to browse files</p>
-                <div class="upload-formats">
-                  <span>JPG</span>
-                  <span>PNG</span>
-                  <span>TIFF</span>
-                </div>
+              <div class="upload-area" id="uploadArea">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h3>Upload Your Image</h3>
+                <p>Drag & drop your image here or click to browse</p>
+                <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                <button type="button" class="btn btn-outline" id="browseBtn">Browse Files</button>
+                <div class="file-info" id="fileInfo"></div>
               </div>
             </div>
-
-            <button type="submit" class="submit-btn">
-              <span>Start Premium Trial</span>
-              <i class="fas fa-crown"></i>
+            
+            <button type="submit" class="btn btn-primary submit-btn">
+              <i class="fas fa-paper-plane"></i>
+              Start a Free Trial
             </button>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits-section">
-      <div class="container">
-        <div class="benefits-content">
-          <div class="benefits-text">
-            <h2 class="benefits-title">Why Choose Our Premium Trial?</h2>
-            <div class="benefits-list">
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <i class="fas fa-check-circle"></i>
-                </div>
-                <div class="benefit-content">
-                  <h3 class="benefit-title">Full Access</h3>
-                  <p class="benefit-desc">
-                    Complete access to all premium features and tools
-                  </p>
-                </div>
-              </div>
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <i class="fas fa-infinity"></i>
-                </div>
-                <div class="benefit-content">
-                  <h3 class="benefit-title">Unlimited Edits</h3>
-                  <p class="benefit-desc">
-                    No limits on the number of images you can edit
-                  </p>
-                </div>
-              </div>
-              <div class="benefit-item">
-                <div class="benefit-icon">
-                  <i class="fas fa-user-tie"></i>
-                </div>
-                <div class="benefit-content">
-                  <h3 class="benefit-title">Personal Editor</h3>
-                  <p class="benefit-desc">
-                    Dedicated professional editor for your projects
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="benefits-visual">
-            <div class="dashboard-preview">
-              <div class="dashboard-header">
-                <h4>Premium Dashboard</h4>
-              </div>
-              <div class="dashboard-stats">
-                <div class="stat-card">
-                  <div class="stat-icon">
-                    <i class="fas fa-images"></i>
-                  </div>
-                  <div class="stat-info">
-                    <div class="stat-value">247</div>
-                    <div class="stat-label">Images Edited</div>
-                  </div>
-                </div>
-                <div class="stat-card">
-                  <div class="stat-icon">
-                    <i class="fas fa-clock"></i>
-                  </div>
-                  <div class="stat-info">
-                    <div class="stat-value">2.4h</div>
-                    <div class="stat-label">Avg. Delivery</div>
-                  </div>
-                </div>
-              </div>
-              <div class="recent-projects">
-                <div class="project-item">
-                  <img
-                    src="../assets/profile.png"
-                    alt="Project"
-                  />
-                  <div class="project-info">
-                    <div class="project-name">Fashion Shoot</div>
-                    <div class="project-status completed">Completed</div>
-                  </div>
-                </div>
-                <div class="project-item">
-                  <img
-                    src="../assets/profile.png"
-                    alt="Project"
-                  />
-                  <div class="project-info">
-                    <div class="project-name">Product Catalog</div>
-                    <div class="project-status processing">Processing</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
+    <!-- How It Works Section -->
+    <section class="how-it-works">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Trusted by Industry Leaders</h2>
+          <h2>How It Works</h2>
+          <p>Simple steps to get your free image edit</p>
         </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-text">
-              "EditY Studio transformed our entire product catalog. The
-              attention to detail and premium quality is unmatched."
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-icon">
+              <i class="fas fa-upload"></i>
             </div>
-            <div class="testimonial-author">
-              <img
-                src="../assets/profile.png"
-                alt="Sarah Johnson"
-                class="author-avatar"
-              />
-              <div class="author-info">
-                <div class="author-name">Sarah Johnson</div>
-                <div class="author-title">Creative Director</div>
-              </div>
-            </div>
-            <div class="testimonial-rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
+            <h3>Upload Your Image</h3>
+            <p>Submit your image through our secure form</p>
           </div>
-          <div class="testimonial-card">
-            <div class="testimonial-text">
-              "The premium trial convinced us immediately. The quality and speed
-              exceeded all expectations."
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-icon">
+              <i class="fas fa-edit"></i>
             </div>
-            <div class="testimonial-author">
-              <img
-                src="../assets/profile.png"
-                alt="Michael Chen"
-                class="author-avatar"
-              />
-              <div class="author-info">
-                <div class="author-name">Michael Chen</div>
-                <div class="author-title">Photography Director</div>
-              </div>
-            </div>
-            <div class="testimonial-rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
+            <h3>We Edit Professionally</h3>
+            <p>Our expert editors process your image</p>
           </div>
-          <div class="testimonial-card">
-            <div class="testimonial-text">
-              "Professional grade results with luxury service. EditY Studio is
-              our go-to partner."
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-icon">
+              <i class="fas fa-download"></i>
             </div>
-            <div class="testimonial-author">
-              <img
-                src="../assets/profile.png"
-                alt="Emma Rodriguez"
-                class="author-avatar"
-              />
-              <div class="author-info">
-                <div class="author-name">Emma Rodriguez</div>
-                <div class="author-title">Brand Manager</div>
-              </div>
-            </div>
-            <div class="testimonial-rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
+            <h3>Download Result</h3>
+            <p>Receive your edited image within 24 hours</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-      <div class="container">
-        <div class="contact-content">
-          <div class="contact-info">
-            <h2 class="contact-title">Need Help Getting Started?</h2>
-            <p class="contact-subtitle">
-              Our premium support team is here to assist you
-            </p>
-            <div class="contact-methods">
-              <div class="contact-method">
-                <div class="method-icon">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <div class="method-info">
-                  <h4>Call Us</h4>
-                  <p>+1 (555) 123-4567</p>
-                </div>
-              </div>
-              <div class="contact-method">
-                <div class="method-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div class="method-info">
-                  <h4>Email Us</h4>
-                  <p>support@editystudio.com</p>
-                </div>
-              </div>
-              <div class="contact-method">
-                <div class="method-icon">
-                  <i class="fas fa-comments"></i>
-                </div>
-                <div class="method-info">
-                  <h4>Live Chat</h4>
-                  <p>Available 24/7</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="contact-form">
-            <h3 class="form-title">Send us a Message</h3>
-            <form class="contact-form-element">
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-input"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="email"
-                  class="form-input"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-input"
-                  placeholder="Subject"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <textarea
-                  class="form-textarea"
-                  placeholder="Your Message"
-                  rows="5"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="contact-btn">
-                <span>Send Message</span>
-                <i class="fas fa-paper-plane"></i>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-      <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">
           <h3 class="footer-title">About us</h3>
           <div class="footer-divider"></div>
           <p class="footer-text">
-            Edity is a Professional Photo Editing Company in Bangladesh with
+            Bright Image Global is a Professional Photo Editing Company in Bangladesh with
             more than 150 Photoshop professionals. We have 5+ years of
             experience in photo editing services. We have become one of the
             fastest-growing photo editing service providers since 2025.
@@ -771,7 +485,7 @@
             </p>
             <p>
               Email:
-              <a href="mailto:info@zenithclipping.com"
+              <a href="mailto:info@brightimageglobal.com"
                 >info@brightimageglobal.com</a
               >
             </p>
@@ -803,7 +517,6 @@
     </footer>
 
     <script src="../sharedLayout/navigation/mainNavigation.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./freeTrial.js"></script>
   </body>
 </html>
