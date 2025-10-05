@@ -59,6 +59,12 @@ ul {
 /* ================================
    Hero Section
 ================================= */
+
+
+
+
+
+
 .clipping-hero {
   position: relative;
   background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
@@ -183,10 +189,33 @@ ul {
   opacity: 0.8;
 }
 
-.hero-image {
+/* .hero-image {
   min-width: 320px;
   position: relative;
+} */
+
+.hero-image {
+  flex: 1 1 50%;
+  min-width: 320px;
+  height: 60vh;              
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.hero-image .card,
+.hero-image .image-compare {
+  width: 100%;
+  height: 100%;             
+}
+
+.hero-image .image-compare img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        
+  border-radius: 12px;
+}
+
 
 /* ================================
    Projects Section
