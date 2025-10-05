@@ -72,8 +72,7 @@ img {
 
 /* Pricing Section */
 .pricing-section {
-  padding: 80px 20px;
-  min-height: 100vh;
+  padding-block: 60px;
   background-color: var(--bg-color);
 }
 
