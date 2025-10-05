@@ -206,6 +206,7 @@ ul {
   flex: 1 1 50%;
   min-width: 320px;
   height: 60vh;
+  max-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
