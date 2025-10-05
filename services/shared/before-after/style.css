@@ -323,10 +323,6 @@ ul {
   padding: 16px;
   display: flex;
   flex-direction: column;
-
-  div {
-    padding-inline: 10px;
-  }
 }
 
 .card-content h3 {
@@ -388,9 +384,9 @@ ul {
 
 }
 
-@media (max-width: 385px) {
+@media (max-width: 355px) {
   .card {
-    width: 280px;
+    width: 80%;
   }
 
   .hero-image .card {
