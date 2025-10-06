@@ -132,6 +132,71 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+   // Service options data
+const serviceOptions = [
+    { value: 'background-removal', text: 'Background Removal' },
+    { value: 'resizing', text: 'Resizing' },
+    { value: 'masking', text: 'Masking' },
+    { value: 'ecommerce-editing', text: 'E-commerce Editing' },
+    { value: 'beauty-retouching', text: 'Beauty Retouching' },
+    { value: 'clipping-path', text: 'Clipping Path' },
+    { value: 'jewelry-retouching', text: 'Jewelry Retouching' },
+    { value: 'real-estate-editing', text: 'Real Estate Editing' },
+    { value: 'image-masking', text: 'Image Masking' },
+    { value: 'blending', text: 'Blending' },
+    { value: 'color-adjustment', text: 'Color Adjustment' },
+    { value: 'image-combination', text: 'Image Combination' },
+    { value: 'other', text: 'Other' }
+];
+
+// Remove first option and handle dropdown behavior
+const serviceSelect = document.getElementById('service');
+let originalOptions = [];
+
+if (serviceSelect) {
+    // Store original options
+    originalOptions = Array.from(serviceSelect.options);
+    
+    // Remove first option initially
+    if (serviceSelect.options.length > 0) {
+        serviceSelect.remove(0);
+    }
+    
+    // Add first option back when dropdown is opened (optional)
+    serviceSelect.addEventListener('focus', function() {
+        // You can choose to add it back or keep it removed
+        // If you want to add it back, use the code below:
+        /*
+        if (serviceSelect.options.length === 12) { // Only actual services, no placeholder
+            const placeholderOption = new Option('Select a service', '');
+            serviceSelect.insertBefore(placeholderOption, serviceSelect.options[0]);
+        }
+        */
+    });
+    
+    // Remove first option again when a selection is made
+    serviceSelect.addEventListener('change', function() {
+        if (this.value !== '' && serviceSelect.options.length > 0 && serviceSelect.options[0].value === '') {
+            serviceSelect.remove(0);
+        }
+    });
+}
+
+// Update reset function
+function resetServiceDropdown() {
+    if (serviceSelect) {
+        // Clear all options
+        while (serviceSelect.options.length > 0) {
+            serviceSelect.remove(0);
+        }
+        
+        // Add back all options except first one
+        for (let i = 1; i < originalOptions.length; i++) {
+            serviceSelect.add(originalOptions[i]);
+        }
+    }
+}
+    
     // Form submission handling
     const trialForm = document.querySelector('.free-trial-form');
     if (trialForm) {
@@ -172,11 +237,30 @@ document.addEventListener('DOMContentLoaded', function() {
                     uploadArea.style.backgroundColor = '';
                 }
                 
+                // Reset service dropdown
+                resetServiceDropdown();
+                
                 // Reset button
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
             }, 2000);
         });
+    }
+    
+    function resetServiceDropdown() {
+        if (serviceSelect) {
+            // Clear all options
+            while (serviceSelect.options.length > 0) {
+                serviceSelect.remove(0);
+            }
+            
+            // Add placeholder only
+            const placeholderOption = new Option('Select a service', '');
+            serviceSelect.add(placeholderOption);
+            
+            // Reset population flag
+            isPopulated = false;
+        }
     }
     
     // Additional services toggle functionality
@@ -215,21 +299,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const serviceItems = document.querySelectorAll('.trial-service-item');
     serviceItems.forEach(item => {
         item.addEventListener('click', function() {
-            const serviceName = this.querySelector('strong').textContent;
+            const serviceName = this.querySelector('strong').textContent.replace(':', '').trim();
             
             // Highlight selected service
             serviceItems.forEach(i => i.classList.remove('selected'));
             this.classList.add('selected');
             
-            // Auto-select the service in the form dropdown if it exists
-            const serviceSelect = document.getElementById('service');
+            // Populate dropdown if not already populated
+            if (!isPopulated) {
+                populateServiceDropdown();
+                isPopulated = true;
+            }
+            
+            // Auto-select the service in the form dropdown
             if (serviceSelect) {
-                const serviceValue = serviceName.toLowerCase().replace(':', '').replace(/\s+/g, '-');
-                for (let option of serviceSelect.options) {
-                    if (option.value === serviceValue) {
-                        serviceSelect.value = serviceValue;
-                        break;
-                    }
+                // Find matching service option
+                const matchingService = serviceOptions.find(service => 
+                    service.text.toLowerCase().includes(serviceName.toLowerCase()) ||
+                    serviceName.toLowerCase().includes(service.text.toLowerCase())
+                );
+                
+                if (matchingService) {
+                    serviceSelect.value = matchingService.value;
                 }
             }
             
@@ -242,20 +333,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Service selection in form
-    const serviceSelect = document.getElementById('service');
     if (serviceSelect) {
         serviceSelect.addEventListener('change', function() {
-            const selectedService = this.options[this.selectedIndex].text;
+            const selectedValue = this.value;
+            const selectedText = this.options[this.selectedIndex].text;
             
-            // Update service items highlighting
-            serviceItems.forEach(item => {
-                const itemService = item.querySelector('strong').textContent.replace(':', '');
-                if (itemService.includes(selectedService) || selectedService.includes(itemService)) {
-                    item.classList.add('selected');
-                } else {
-                    item.classList.remove('selected');
-                }
-            });
+            if (selectedValue) {
+                // Update service items highlighting
+                serviceItems.forEach(item => {
+                    const itemService = item.querySelector('strong').textContent.replace(':', '').trim();
+                    if (selectedText.toLowerCase().includes(itemService.toLowerCase()) || 
+                        itemService.toLowerCase().includes(selectedText.toLowerCase())) {
+                        item.classList.add('selected');
+                    } else {
+                        item.classList.remove('selected');
+                    }
+                });
+            }
         });
     }
     
@@ -479,6 +573,28 @@ window.FreeTrialJS = {
                 const preview = uploadArea.querySelector('img');
                 if (preview) preview.remove();
             }
+            
+            // Reset service dropdown
+            const serviceSelect = document.getElementById('service');
+            if (serviceSelect) {
+                // Clear all options
+                while (serviceSelect.options.length > 0) {
+                    serviceSelect.remove(0);
+                }
+                
+                // Add placeholder only
+                const placeholderOption = new Option('Select a service', '');
+                serviceSelect.add(placeholderOption);
+                
+                // Reset population flag
+                window.FreeTrialJS.isPopulated = false;
+            }
+            
+            // Remove selected state from service items
+            const serviceItems = document.querySelectorAll('.trial-service-item');
+            serviceItems.forEach(item => {
+                item.classList.remove('selected');
+            });
         }
     },
     
@@ -490,5 +606,8 @@ window.FreeTrialJS = {
                 item.click();
             }
         });
-    }
+    },
+    
+    // Make population flag accessible
+    isPopulated: false
 };
