@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright Image Global - Professional Image Editing</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Navigation Styles -->
+    <link
+      rel="stylesheet"
+      href="../sharedLayout/navigation/mainNavigation.styles.css"
+    />
+    <!-- Footer Styles -->
+    <link rel="stylesheet" href="../sharedLayout/footer/footer.css" />
+    <link rel="stylesheet" href="./privacy.css" />
+  </head>
+  <body>
+         <!-- Navigation Header -->
+    <header class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="../index.html" class="logo-container">
+          <img src="../logo.png" alt="Bright Image Global Logo" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <a href="../index.html" class="nav-link">HOME</a>
+
+          <!-- Services Dropdown -->
+          <div class="dropdown">
+            <button class="nav-link dropdown-btn">
+              Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </button>
+            <div class="dropdown-content services-dropdown">
+              <div class="services-grid">
+                <div class="service-category">
+                  <h3>BASIC EDITING</h3>
+                  <ul>
+                    <li>
+                      <a href="../services/clipping/clipping.html"
+                        >Clipping Path</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../services/bgRemoval/bgRemoval.html"
+                        >Bg Removal</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../services/resizing/resizing.html">Resizing</a>
+                    </li>
+                    <li>
+                      <a href="../services/masking/masking.html">Masking</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-category">
+                  <h3>ADVANCE EDITING</h3>
+                  <ul>
+                    <li>
+                      <a href="../services/ecommerceEditing/ecommerceEditing.html"
+                        >E-commerce EDITING</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="../services/beauty-retouching/beauty-retouching.html"
+                        >Beauty Retouching</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../services/jewellery-retouching/jewellery.html"
+                        >Jewelry Retouching</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="../services/realestateEditing/realestateEditing.html"
+                        >Real-Estate Editing</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-category">
+                  <h3>IMAGE MANIPULATION</h3>
+                  <ul>
+                    <li>
+                      <a href="../services/imageMasking/imageMasking.html"
+                        >Image Masking</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../services/blending/blending.html">Blending</a>
+                    </li>
+                    <li>
+                      <a href="../services/colorAdjustment/colorAdjustment.html"
+                        >Color Adjustment</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../services/imageCombination/imageCombination.html"
+                        >Image combination</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="../projects/projects.html" class="nav-link">Projects</a>
+          <a href="../price/price.html" class="nav-link">Price</a>
+          <a href="../blog/blog.html" class="nav-link">Blog</a>
+          <a href="../contact/contact.html" class="nav-link">Contact</a>
+        </nav>
+
+           <div class="">
+          <a href="../freeTrial/freeTrial.html">
+            <button class="btn btn-yellow">FREE TRIAL</button>
+          </a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-header">
+        <span class="mobile-menu-title">Menu</span>
+        <button class="mobile-menu-close" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="mobile-menu-content">
+        <nav class="mobile-nav">
+          <a href="../index.html" class="mobile-nav-link">HOME</a>
+
+          <!-- Mobile Services Section -->
+          <div class="mobile-dropdown">
+            <button class="mobile-nav-link mobile-dropdown-btn">
+              Services
+              <i class="fas fa-chevron-down mobile-dropdown-icon"></i>
+            </button>
+            <div class="mobile-dropdown-content">
+              <div class="mobile-service-category">
+                <h4>BASIC EDITING</h4>
+                <ul>
+                  <li>
+                    <a href="../services/clipping/clipping.html">Clipping Path</a>
+                  </li>
+                  <li>
+                    <a href="../services/bgRemoval/bgRemoval.html">Bg Removal</a>
+                  </li>
+                  <li>
+                    <a href="../services/resizing/resizing.html">Resizing</a>
+                  </li>
+                  <li><a href="../services/masking/masking.html">Masking</a></li>
+                </ul>
+              </div>
+
+              <div class="mobile-service-category">
+                <h4>ADVANCE EDITING</h4>
+                <ul>
+                  <li>
+                    <a href="../services/ecommerceEditing/ecommerceEditing.html"
+                      >E-commerce EDITING</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../services/beauty-retouching/beauty-retouching.html"
+                      >Beauty Retouching</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../services/jewellery-retouching/jewellery.html"
+                      >Jewelry Retouching</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../services/realestateEditing/realestateEditing.html"
+                      >Real-Estate Editing</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mobile-service-category">
+                <h4>IMAGE MANIPULATION</h4>
+                <ul>
+                  <li>
+                    <a href="../services/masking/masking.html">Image Masking</a>
+                  </li>
+                  <li>
+                    <a href="../services/blending/blending.html">Blending</a>
+                  </li>
+                  <li>
+                    <a href="../services/colorAdjustment/colorAdjustment.html"
+                      >Color Adjustment</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../services/imageCombination/imageCombination.html"
+                      >Image combination</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <a href="../projects/projects.html" class="mobile-nav-link">Projects</a>
+          <a href="../price/price.html" class="mobile-nav-link">Price</a>
+          <a href="../blog/blog.html" class="mobile-nav-link">Blog</a>
+          <a href="../contact/contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+      </div>
+      <div class="mobile-menu-footer">
+        <a href="../freeTrial/freeTrial.html" class="btn btn-yellow mobile-btn"
+          >FREE TRIAL</a
+        >
+      </div>
+    </div>
+
+
+   <!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Data Privacy Policy</h1>
+      <p>
+        We are committed to protecting your privacy and ensuring the security of your personal data. This policy explains how we collect, use, and safeguard your information when you interact with our services.
+      </p>
+      <div class="last-updated">
+        <span>Last Updated: March 15, 2024</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="container">
+    <div class="content-wrapper">
+      <!-- Table of Contents -->
+      <aside class="toc-sidebar">
+        <div class="toc-container">
+          <h3>Table of Contents</h3>
+          <nav class="toc-nav">
+            <a href="#information-collect" class="toc-link">1. Information We Collect</a>
+            <a href="#how-we-use" class="toc-link">2. How We Use Information</a>
+            <a href="#information-sharing" class="toc-link">3. Information Sharing</a>
+            <a href="#data-security" class="toc-link">4. Data Security</a>
+            <a href="#cookies-tracking" class="toc-link">5. Cookies & Tracking</a>
+            <a href="#your-rights" class="toc-link">6. Your Rights</a>
+            <a href="#data-retention" class="toc-link">7. Data Retention</a>
+            <a href="#international-transfers" class="toc-link">8. International Transfers</a>
+            <a href="#children-privacy" class="toc-link">9. Children's Privacy</a>
+            <a href="#policy-updates" class="toc-link">10. Policy Updates</a>
+            <a href="#contact-info" class="toc-link">11. Contact Information</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Privacy Policy Content -->
+      <main class="policy-content">
+        <!-- Section 1: Information We Collect -->
+        <section id="information-collect" class="policy-section">
+          <h2>1. Information We Collect</h2>
+
+          <h3>Personal Information</h3>
+          <p>
+            We collect personal information that you provide directly to us when you:
+          </p>
+          <ul>
+            <li>Create an account with our services</li>
+            <li>Use our products or services</li>
+            <li>Contact our customer support team</li>
+            <li>Subscribe to our communications</li>
+            <li>Participate in surveys or promotions</li>
+          </ul>
+
+          <p>This information may include:</p>
+          <ul>
+            <li>Contact details (name, email, phone number)</li>
+            <li>Account credentials and preferences</li>
+            <li>Payment and billing information</li>
+            <li>Demographic information</li>
+            <li>Communication history</li>
+          </ul>
+
+          <h3>Usage Information</h3>
+          <p>
+            We automatically collect information about your interaction with our services:
+          </p>
+          <ul>
+            <li>Service usage patterns and frequency</li>
+            <li>Feature usage and preferences</li>
+            <li>Device and connection information</li>
+            <li>Performance and error data</li>
+            <li>Navigation paths and clickstream data</li>
+          </ul>
+
+          <h3>Technical Information</h3>
+          <p>
+            We collect technical data to ensure service functionality:
+          </p>
+          <ul>
+            <li>IP address and approximate location</li>
+            <li>Browser type and settings</li>
+            <li>Operating system and device information</li>
+            <li>Cookie and tracking data</li>
+            <li>Network and connection details</li>
+          </ul>
+        </section>
+
+        <!-- Section 2: How We Use Information -->
+        <section id="how-we-use" class="policy-section">
+          <h2>2. How We Use Your Information</h2>
+
+          <h3>Service Provision</h3>
+          <p>
+            We use your information to deliver and maintain our services:
+          </p>
+          <ul>
+            <li>Process your requests and transactions</li>
+            <li>Provide customer support and service</li>
+            <li>Manage your account and preferences</li>
+            <li>Authenticate users and secure accounts</li>
+            <li>Deliver service notifications</li>
+          </ul>
+
+          <h3>Communication</h3>
+          <p>We use your contact information to:</p>
+          <ul>
+            <li>Respond to your inquiries and requests</li>
+            <li>Send important service updates</li>
+            <li>Provide technical support</li>
+            <li>Send marketing communications (with consent)</li>
+            <li>Conduct user research and surveys</li>
+          </ul>
+
+          <h3>Service Improvement</h3>
+          <p>We analyze data to enhance our services:</p>
+          <ul>
+            <li>Improve service functionality and features</li>
+            <li>Optimize user experience and interface</li>
+            <li>Develop new products and services</li>
+            <li>Monitor service performance and reliability</li>
+            <li>Ensure security and prevent fraud</li>
+          </ul>
+        </section>
+
+        <!-- Section 3: Information Sharing -->
+        <section id="information-sharing" class="policy-section">
+          <h2>3. Information Sharing and Disclosure</h2>
+
+          <p>
+            We do not sell your personal information to third parties. We may share information only in specific circumstances:
+          </p>
+
+          <h3>Service Providers</h3>
+          <p>
+            We work with trusted partners who assist in:
+          </p>
+          <ul>
+            <li>Payment processing and financial services</li>
+            <li>Cloud hosting and data storage</li>
+            <li>Customer relationship management</li>
+            <li>Analytics and performance monitoring</li>
+            <li>Marketing and communication services</li>
+          </ul>
+
+          <h3>Legal Compliance</h3>
+          <p>
+            We may disclose information when legally required:
+          </p>
+          <ul>
+            <li>Comply with legal obligations and regulations</li>
+            <li>Respond to lawful requests from authorities</li>
+            <li>Protect our rights, property, or safety</li>
+            <li>Prevent fraud or security breaches</li>
+            <li>Enforce our terms and conditions</li>
+          </ul>
+
+          <h3>Business Transactions</h3>
+          <p>
+            In case of mergers, acquisitions, or business transfers, your information may be transferred to the new entity under similar privacy protections.
+          </p>
+        </section>
+
+        <!-- Section 4: Data Security -->
+        <section id="data-security" class="policy-section">
+          <h2>4. Data Security</h2>
+
+          <p>
+            We implement robust security measures to protect your information:
+          </p>
+
+          <h3>Technical Protection</h3>
+          <ul>
+            <li>Encryption of data in transit and at rest</li>
+            <li>Secure network infrastructure</li>
+            <li>Regular security assessments and testing</li>
+            <li>Access controls and authentication</li>
+            <li>Secure data backup procedures</li>
+          </ul>
+
+          <h3>Organizational Measures</h3>
+          <ul>
+            <li>Employee privacy and security training</li>
+            <li>Strict access controls and authorization</li>
+            <li>Regular policy reviews and updates</li>
+            <li>Incident response and breach procedures</li>
+            <li>Vendor security assessments</li>
+          </ul>
+
+          <h3>Physical Security</h3>
+          <ul>
+            <li>Secure data center facilities</li>
+            <li>Access control and monitoring systems</li>
+            <li>Environmental protection measures</li>
+            <li>Secure disposal of physical media</li>
+          </ul>
+        </section>
+
+        <!-- Section 5: Cookies and Tracking -->
+        <section id="cookies-tracking" class="policy-section">
+          <h2>5. Cookies and Tracking Technologies</h2>
+
+          <h3>Types of Cookies</h3>
+          <p>
+            We use various cookies to enhance your experience:
+          </p>
+
+          <h3>Essential Cookies</h3>
+          <ul>
+            <li>Required for basic website functionality</li>
+            <li>Enable secure login and session management</li>
+            <li>Remember user preferences and settings</li>
+            <li>Support security features</li>
+          </ul>
+
+          <h3>Analytical Cookies</h3>
+          <ul>
+            <li>Help understand how users interact with our services</li>
+            <li>Collect anonymous usage statistics</li>
+            <li>Identify areas for improvement</li>
+            <li>Measure service performance</li>
+          </ul>
+
+          <h3>Marketing Cookies</h3>
+          <ul>
+            <li>Deliver relevant advertising</li>
+            <li>Track campaign effectiveness</li>
+            <li>Enable social media features</li>
+            <li>Support retargeting efforts</li>
+          </ul>
+
+          <h3>Cookie Management</h3>
+          <p>
+            You can control cookie settings through your browser. Note that disabling cookies may affect service functionality.
+          </p>
+        </section>
+
+        <!-- Section 6: Your Rights -->
+        <section id="your-rights" class="policy-section">
+          <h2>6. Your Rights and Choices</h2>
+
+          <p>
+            You have important rights regarding your personal information:
+          </p>
+
+          <h3>Access and Information</h3>
+          <ul>
+            <li>Request access to your personal data</li>
+            <li>Receive information about data processing</li>
+            <li>Obtain data in portable format</li>
+          </ul>
+
+          <h3>Correction and Control</h3>
+          <ul>
+            <li>Update and correct inaccurate information</li>
+            <li>Modify your account preferences</li>
+            <li>Control communication preferences</li>
+          </ul>
+
+          <h3>Deletion and Restrictions</h3>
+          <ul>
+            <li>Request deletion of your personal data</li>
+            <li>Restrict processing of your information</li>
+            <li>Object to certain data processing activities</li>
+          </ul>
+
+          <h3>Communication Preferences</h3>
+          <ul>
+            <li>Opt-out of marketing communications</li>
+            <li>Manage notification settings</li>
+            <li>Control promotional content</li>
+          </ul>
+
+          <p>
+            To exercise these rights, please contact us using the information below.
+          </p>
+        </section>
+
+        <!-- Section 7: Data Retention -->
+        <section id="data-retention" class="policy-section">
+          <h2>7. Data Retention</h2>
+
+          <p>
+            We retain personal information only as long as necessary:
+          </p>
+
+          <h3>Account Data</h3>
+          <ul>
+            <li>Active account information retained while account is active</li>
+            <li>Account data deleted within 60 days of closure</li>
+            <li>Some data retained for legal compliance purposes</li>
+          </ul>
+
+          <h3>Service Data</h3>
+          <ul>
+            <li>Usage data retained for service improvement</li>
+            <li>Backup data maintained for disaster recovery</li>
+            <li>Analytics data stored in aggregated form</li>
+          </ul>
+
+          <h3>Communication Records</h3>
+          <ul>
+            <li>Support communications kept for 2 years</li>
+            <li>Marketing interaction records kept for 3 years</li>
+            <li>Legal records retained as required by law</li>
+          </ul>
+
+          <h3>Technical Data</h3>
+          <ul>
+            <li>Log files retained for 1 year</li>
+            <li>Security data kept for investigation purposes</li>
+            <li>Performance metrics stored indefinitely in aggregate</li>
+          </ul>
+        </section>
+
+        <!-- Section 8: International Transfers -->
+        <section id="international-transfers" class="policy-section">
+          <h2>8. International Data Transfers</h2>
+
+          <p>
+            Your information may be transferred internationally for processing:
+          </p>
+
+          <h3>Transfer Mechanisms</h3>
+          <ul>
+            <li>Standard Contractual Clauses for EU/EEA transfers</li>
+            <li>Adequacy decisions for approved countries</li>
+            <li>Binding Corporate Rules for internal transfers</li>
+            <li>Other approved transfer mechanisms</li>
+          </ul>
+
+          <h3>Processing Locations</h3>
+          <ul>
+            <li>Primary data centers in secure locations</li>
+            <li>Backup facilities in different regions</li>
+            <li>Third-party services with global operations</li>
+            <li>Cloud infrastructure with multiple regions</li>
+          </ul>
+
+          <h3>Protection Measures</h3>
+          <p>
+            All international transfers include appropriate safeguards to ensure data protection standards are maintained.
+          </p>
+        </section>
+
+        <!-- Section 9: Children's Privacy -->
+        <section id="children-privacy" class="policy-section">
+          <h2>9. Children's Privacy</h2>
+
+          <p>We take children's privacy seriously:</p>
+
+          <h3>Age Restrictions</h3>
+          <ul>
+            <li>Services not intended for children under 16</li>
+            <li>We do not knowingly collect data from children under 16</li>
+            <li>Users under 18 require parental consent where applicable</li>
+          </ul>
+
+          <h3>Parental Controls</h3>
+          <ul>
+            <li>Parents can review children's information</li>
+            <li>Request deletion of children's data</li>
+            <li>Refuse further data collection</li>
+          </ul>
+
+          <h3>Compliance</h3>
+          <p>
+            If we discover we have collected information from a child under 16 without consent, we will promptly delete that information.
+          </p>
+        </section>
+
+        <!-- Section 10: Policy Updates -->
+        <section id="policy-updates" class="policy-section">
+          <h2>10. Updates to This Privacy Policy</h2>
+
+          <p>
+            We may update this policy to reflect changes in our practices:
+          </p>
+
+          <h3>Change Notification</h3>
+          <ul>
+            <li>Email notification for significant changes</li>
+            <li>Website notice for policy updates</li>
+            <li>Updated revision date</li>
+            <li>Summary of changes provided</li>
+          </ul>
+
+          <h3>Continued Use</h3>
+          <p>
+            Continued use of our services after updates constitutes acceptance of the revised policy.
+          </p>
+
+          <h3>Policy History</h3>
+          <p>
+            Previous policy versions are archived and available upon request.
+          </p>
+        </section>
+
+        <!-- Section 11: Contact Information -->
+        <section id="contact-info" class="policy-section">
+          <h2>11. Contact Information</h2>
+
+          <p>
+            For privacy-related questions or requests, please contact us:
+          </p>
+
+          <div class="contact-grid">
+            <div class="contact-item">
+              <h3>Data Protection Officer</h3>
+              <p>Email: privacy@company.com</p>
+              <p>Phone: +1 (555) 123-4567</p>
+            </div>
+
+            <div class="contact-item">
+              <h3>Mailing Address</h3>
+              <p>
+                Privacy Department<br />
+                123 Security Lane<br />
+                Data City, DC 12345<br />
+                United States
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <h3>EU Representative</h3>
+              <p>Email: eu-privacy@company.com</p>
+              <p>
+                EU Privacy Office<br />
+                456 Compliance Street<br />
+                Brussels, Belgium 1000
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <h3>Response Commitment</h3>
+              <p>
+                We respond to privacy inquiries within 30 days. For urgent matters, please indicate "URGENT" in your communication.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Privacy Request Form</h3>
+            <form id="privacyForm">
+              <div class="form-group">
+                <label for="requestType">Request Type</label>
+                <select id="requestType" name="requestType" required>
+                  <option value="">Select request type</option>
+                  <option value="access">Data Access Request</option>
+                  <option value="correction">Data Correction</option>
+                  <option value="deletion">Data Deletion</option>
+                  <option value="portability">Data Portability</option>
+                  <option value="restriction">Processing Restriction</option>
+                  <option value="objection">Processing Objection</option>
+                  <option value="other">Other Privacy Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="accountEmail">Account Email (if different)</label>
+                <input type="email" id="accountEmail" name="accountEmail" />
+              </div>
+
+              <div class="form-group">
+                <label for="description">Request Description</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  rows="5"
+                  required
+                  placeholder="Please provide details about your privacy request..."
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    id="verification"
+                    name="verification"
+                    required
+                  />
+                  <span class="checkmark"></span>
+                  I confirm that I am the account holder or authorized representative
+                </label>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                Submit Privacy Request
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</div>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 19V5M5 12L12 5L19 12"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3 class="footer-title">About us</h3>
+          <div class="footer-divider"></div>
+          <p class="footer-text">
+            Edity is a Professional Photo Editing Company in Bangladesh with
+            more than 150 Photoshop professionals. We have 5+ years of
+            experience in photo editing services. We have become one of the
+            fastest-growing photo editing service providers since 2025.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Important Links</h3>
+          <div class="footer-divider"></div>
+          <ul class="footer-links">
+            <li><a href="../about/about.html">About us</a></li>
+            <li><a href="../terms/terms.html">Terms and Conditions</a></li>
+            <li><a href="../privacy/privacy.html">Privacy Policy</a></li>
+            <li><a href="../dataPrivacy/privacy.html">Data Security Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Contact us</h3>
+          <div class="footer-divider"></div>
+          <div class="contact-info">
+            <p>
+              Bangladesh Office 984, Rupatok, Road no.20/1 Basal, Bangladesh
+            </p>
+            <p>
+              Email:
+              <a href="mailto:info@zenithclipping.com"
+                >info@brightimageglobal.com</a
+              >
+            </p>
+            <p>Phone: <a href="tel:+8801681866775">+8801681866775</a></p>
+          </div>
+        </div>
+         <div class="footer-column">
+          <h3 class="footer-title">Payment Accepted</h3>
+          <div class="footer-divider"></div>
+          <div class="contact-info">
+            <img src="../assets/untitled-final-300x144-1-1.png.webp" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="center-social-icons social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2025 All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <script src="./privacy.js"></script>
+  </body>
+</html>
