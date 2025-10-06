@@ -104,6 +104,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Change upload area appearance
                 uploadArea.style.borderColor = '#28a745';
                 uploadArea.style.backgroundColor = 'rgba(40, 167, 69, 0.1)';
+                
+                // Create image preview
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.createElement('img');
+                    preview.src = e.target.result;
+                    preview.style.maxWidth = '200px';
+                    preview.style.maxHeight = '200px';
+                    preview.style.borderRadius = '8px';
+                    preview.style.marginTop = '10px';
+                    
+                    // Remove existing preview
+                    const existingPreview = uploadArea.querySelector('img');
+                    if (existingPreview) {
+                        existingPreview.remove();
+                    }
+                    
+                    uploadArea.appendChild(preview);
+                };
+                reader.readAsDataURL(file);
             }
         });
         
@@ -132,71 +152,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-   // Service options data
-const serviceOptions = [
-    { value: 'background-removal', text: 'Background Removal' },
-    { value: 'resizing', text: 'Resizing' },
-    { value: 'masking', text: 'Masking' },
-    { value: 'ecommerce-editing', text: 'E-commerce Editing' },
-    { value: 'beauty-retouching', text: 'Beauty Retouching' },
-    { value: 'clipping-path', text: 'Clipping Path' },
-    { value: 'jewelry-retouching', text: 'Jewelry Retouching' },
-    { value: 'real-estate-editing', text: 'Real Estate Editing' },
-    { value: 'image-masking', text: 'Image Masking' },
-    { value: 'blending', text: 'Blending' },
-    { value: 'color-adjustment', text: 'Color Adjustment' },
-    { value: 'image-combination', text: 'Image Combination' },
-    { value: 'other', text: 'Other' }
-];
+    // Service options data
+    const serviceOptions = [
+        { value: 'background-removal', text: 'Background Removal' },
+        { value: 'resizing', text: 'Resizing' },
+        { value: 'masking', text: 'Masking' },
+        { value: 'ecommerce-editing', text: 'E-commerce Editing' },
+        { value: 'beauty-retouching', text: 'Beauty Retouching' },
+        { value: 'clipping-path', text: 'Clipping Path' },
+        { value: 'jewelry-retouching', text: 'Jewelry Retouching' },
+        { value: 'real-estate-editing', text: 'Real Estate Editing' },
+        { value: 'image-masking', text: 'Image Masking' },
+        { value: 'blending', text: 'Blending' },
+        { value: 'color-adjustment', text: 'Color Adjustment' },
+        { value: 'image-combination', text: 'Image Combination' },
+        { value: 'other', text: 'Other' }
+    ];
 
-// Remove first option and handle dropdown behavior
-const serviceSelect = document.getElementById('service');
-let originalOptions = [];
-
-if (serviceSelect) {
-    // Store original options
-    originalOptions = Array.from(serviceSelect.options);
+    // Service dropdown functionality
+    const serviceSelect = document.getElementById('service');
     
-    // Remove first option initially
-    if (serviceSelect.options.length > 0) {
-        serviceSelect.remove(0);
-    }
-    
-    // Add first option back when dropdown is opened (optional)
-    serviceSelect.addEventListener('focus', function() {
-        // You can choose to add it back or keep it removed
-        // If you want to add it back, use the code below:
-        /*
-        if (serviceSelect.options.length === 12) { // Only actual services, no placeholder
-            const placeholderOption = new Option('Select a service', '');
-            serviceSelect.insertBefore(placeholderOption, serviceSelect.options[0]);
-        }
-        */
-    });
-    
-    // Remove first option again when a selection is made
-    serviceSelect.addEventListener('change', function() {
-        if (this.value !== '' && serviceSelect.options.length > 0 && serviceSelect.options[0].value === '') {
-            serviceSelect.remove(0);
-        }
-    });
-}
-
-// Update reset function
-function resetServiceDropdown() {
     if (serviceSelect) {
-        // Clear all options
-        while (serviceSelect.options.length > 0) {
-            serviceSelect.remove(0);
-        }
-        
-        // Add back all options except first one
-        for (let i = 1; i < originalOptions.length; i++) {
-            serviceSelect.add(originalOptions[i]);
-        }
+        // Service selection in form
+        serviceSelect.addEventListener('change', function() {
+            const selectedValue = this.value;
+            const selectedText = this.options[this.selectedIndex].text;
+            
+            if (selectedValue) {
+                // Update service items highlighting
+                const serviceItems = document.querySelectorAll('.trial-service-item');
+                serviceItems.forEach(item => {
+                    const itemService = item.querySelector('strong').textContent.replace(':', '').trim();
+                    if (selectedText.toLowerCase().includes(itemService.toLowerCase()) || 
+                        itemService.toLowerCase().includes(selectedText.toLowerCase())) {
+                        item.classList.add('selected');
+                    } else {
+                        item.classList.remove('selected');
+                    }
+                });
+            }
+        });
     }
-}
-    
+
     // Form submission handling
     const trialForm = document.querySelector('.free-trial-form');
     if (trialForm) {
@@ -235,32 +232,21 @@ function resetServiceDropdown() {
                 if (uploadArea) {
                     uploadArea.style.borderColor = '#ddd';
                     uploadArea.style.backgroundColor = '';
+                    const preview = uploadArea.querySelector('img');
+                    if (preview) preview.remove();
                 }
                 
-                // Reset service dropdown
-                resetServiceDropdown();
+                // Remove selected state from service items
+                const serviceItems = document.querySelectorAll('.trial-service-item');
+                serviceItems.forEach(item => {
+                    item.classList.remove('selected');
+                });
                 
                 // Reset button
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
             }, 2000);
         });
-    }
-    
-    function resetServiceDropdown() {
-        if (serviceSelect) {
-            // Clear all options
-            while (serviceSelect.options.length > 0) {
-                serviceSelect.remove(0);
-            }
-            
-            // Add placeholder only
-            const placeholderOption = new Option('Select a service', '');
-            serviceSelect.add(placeholderOption);
-            
-            // Reset population flag
-            isPopulated = false;
-        }
     }
     
     // Additional services toggle functionality
@@ -305,12 +291,6 @@ function resetServiceDropdown() {
             serviceItems.forEach(i => i.classList.remove('selected'));
             this.classList.add('selected');
             
-            // Populate dropdown if not already populated
-            if (!isPopulated) {
-                populateServiceDropdown();
-                isPopulated = true;
-            }
-            
             // Auto-select the service in the form dropdown
             if (serviceSelect) {
                 // Find matching service option
@@ -330,27 +310,38 @@ function resetServiceDropdown() {
                 formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
-    });
-    
-    // Service selection in form
-    if (serviceSelect) {
-        serviceSelect.addEventListener('change', function() {
-            const selectedValue = this.value;
-            const selectedText = this.options[this.selectedIndex].text;
+        
+        // Initialize tooltips for service items
+        item.title = 'Click to select this service for your free trial';
+        
+        // Make service items focusable
+        item.setAttribute('tabindex', '0');
+        
+        // Add keyboard navigation for service items
+        item.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
             
-            if (selectedValue) {
-                // Update service items highlighting
-                serviceItems.forEach(item => {
-                    const itemService = item.querySelector('strong').textContent.replace(':', '').trim();
-                    if (selectedText.toLowerCase().includes(itemService.toLowerCase()) || 
-                        itemService.toLowerCase().includes(selectedText.toLowerCase())) {
-                        item.classList.add('selected');
-                    } else {
-                        item.classList.remove('selected');
-                    }
-                });
+            // Arrow key navigation
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                e.preventDefault();
+                const nextIndex = (Array.from(serviceItems).indexOf(this) + 1) % serviceItems.length;
+                serviceItems[nextIndex].focus();
+            }
+            
+            if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                const prevIndex = (Array.from(serviceItems).indexOf(this) - 1 + serviceItems.length) % serviceItems.length;
+                serviceItems[prevIndex].focus();
             }
         });
+    });
+    
+    // Auto-focus first service item
+    if (serviceItems.length > 0) {
+        serviceItems[0].focus();
     }
     
     // Price calculator functionality (optional)
@@ -386,72 +377,6 @@ function resetServiceDropdown() {
         observer.observe(card);
     });
     
-    // Add CSS for selected state
-    const style = document.createElement('style');
-    style.textContent = `
-        .trial-service-item.selected {
-            border-left-color: var(--accent-color) !important;
-            background: rgba(76, 201, 240, 0.1) !important;
-            transform: translateX(10px) !important;
-            box-shadow: 0 8px 20px rgba(76, 201, 240, 0.2) !important;
-        }
-        
-        .trial-service-item.selected::before {
-            background: linear-gradient(90deg, transparent, rgba(76, 201, 240, 0.2), transparent) !important;
-        }
-        
-        .submit-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .fa-spin {
-            animation: spin 1s linear infinite;
-        }
-    `;
-    document.head.appendChild(style);
-    
-    // Initialize tooltips for service items
-    serviceItems.forEach(item => {
-        item.title = 'Click to select this service for your free trial';
-    });
-    
-    // Add keyboard navigation for service items
-    serviceItems.forEach((item, index) => {
-        item.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                this.click();
-            }
-            
-            // Arrow key navigation
-            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-                e.preventDefault();
-                const nextIndex = (index + 1) % serviceItems.length;
-                serviceItems[nextIndex].focus();
-            }
-            
-            if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-                e.preventDefault();
-                const prevIndex = (index - 1 + serviceItems.length) % serviceItems.length;
-                serviceItems[prevIndex].focus();
-            }
-        });
-        
-        // Make service items focusable
-        item.setAttribute('tabindex', '0');
-    });
-    
-    // Auto-focus first service item
-    if (serviceItems.length > 0) {
-        serviceItems[0].focus();
-    }
-    
     // Add service category filtering (optional enhancement)
     const filterButtons = document.querySelectorAll('.trial-filter-btn');
     if (filterButtons.length > 0) {
@@ -472,36 +397,6 @@ function resetServiceDropdown() {
                     }
                 });
             });
-        });
-    }
-    
-    // Add image preview functionality
-    if (imageUpload) {
-        imageUpload.addEventListener('change', function() {
-            if (this.files && this.files[0]) {
-                const file = this.files[0];
-                const reader = new FileReader();
-                
-                reader.onload = function(e) {
-                    // Create image preview
-                    const preview = document.createElement('img');
-                    preview.src = e.target.result;
-                    preview.style.maxWidth = '200px';
-                    preview.style.maxHeight = '200px';
-                    preview.style.borderRadius = '8px';
-                    preview.style.marginTop = '10px';
-                    
-                    // Remove existing preview
-                    const existingPreview = uploadArea.querySelector('img');
-                    if (existingPreview) {
-                        existingPreview.remove();
-                    }
-                    
-                    uploadArea.appendChild(preview);
-                };
-                
-                reader.readAsDataURL(file);
-            }
         });
     }
     
@@ -551,6 +446,46 @@ function resetServiceDropdown() {
         // Initialize counter
         instructionsTextarea.dispatchEvent(new Event('input'));
     }
+    
+    // Add CSS for selected state and animations
+    const style = document.createElement('style');
+    style.textContent = `
+        .trial-service-item.selected {
+            border-left-color: var(--accent-color) !important;
+            background: rgba(76, 201, 240, 0.1) !important;
+            transform: translateX(10px) !important;
+            box-shadow: 0 8px 20px rgba(76, 201, 240, 0.2) !important;
+        }
+        
+        .trial-service-item.selected::before {
+            background: linear-gradient(90deg, transparent, rgba(76, 201, 240, 0.2), transparent) !important;
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .fa-spin {
+            animation: spin 1s linear infinite;
+        }
+        
+        .trial-service-item {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .trial-service-item:hover {
+            background: rgba(76, 201, 240, 0.05);
+            transform: translateX(5px);
+        }
+    `;
+    document.head.appendChild(style);
 });
 
 // Export functions for potential reuse
@@ -574,22 +509,6 @@ window.FreeTrialJS = {
                 if (preview) preview.remove();
             }
             
-            // Reset service dropdown
-            const serviceSelect = document.getElementById('service');
-            if (serviceSelect) {
-                // Clear all options
-                while (serviceSelect.options.length > 0) {
-                    serviceSelect.remove(0);
-                }
-                
-                // Add placeholder only
-                const placeholderOption = new Option('Select a service', '');
-                serviceSelect.add(placeholderOption);
-                
-                // Reset population flag
-                window.FreeTrialJS.isPopulated = false;
-            }
-            
             // Remove selected state from service items
             const serviceItems = document.querySelectorAll('.trial-service-item');
             serviceItems.forEach(item => {
@@ -606,8 +525,5 @@ window.FreeTrialJS = {
                 item.click();
             }
         });
-    },
-    
-    // Make population flag accessible
-    isPopulated: false
+    }
 };
