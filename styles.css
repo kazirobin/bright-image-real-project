@@ -1423,3 +1423,191 @@ section {
     justify-content: flex-start;
   }
 }
+
+
+
+
+
+        .about-page .clients-section {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-page .clients-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #4a90e2, #50c878, #ff6b6b);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .about-page .clients-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .about-page .clients-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #4a90e2, #50c878);
+            border-radius: 2px;
+        }
+
+        .about-page .clients-section > .container > p {
+            text-align: center;
+            max-width: 700px;
+            margin: 2rem auto 0;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .about-page .client-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .about-page .client-logo {
+            width: 180px;
+            height: 100px;
+            background: #fff;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            transition: all 0.4s ease;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-page .client-logo::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .about-page .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-page .client-logo:hover::before {
+            left: 100%;
+        }
+
+        .about-page .client-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .about-page .client-logo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Animation for logos on load */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 0.8;
+                transform: translateY(0);
+            }
+        }
+
+        .about-page .client-logo {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .about-page .client-logo:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .about-page .client-logo:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .about-page .client-logo:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .about-page .client-logo:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .about-page .client-logos {
+                gap: 2rem;
+            }
+            
+            .about-page .client-logo {
+                width: 160px;
+                height: 90px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-page .clients-section {
+                padding: 3rem 0;
+            }
+            
+            .about-page .clients-section h2 {
+                font-size: 2rem;
+            }
+            
+            .about-page .client-logos {
+                gap: 1.5rem;
+            }
+            
+            .about-page .client-logo {
+                width: 140px;
+                height: 80px;
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-page .client-logos {
+                gap: 1rem;
+            }
+            
+            .about-page .client-logo {
+                width: 120px;
+                height: 70px;
+            }
+        }
