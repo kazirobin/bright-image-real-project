@@ -136,6 +136,7 @@
 
 .btn-outline:hover {
   border-color: #fff;
+  color: var(--text-color);
 }
 
 .hero-stats {

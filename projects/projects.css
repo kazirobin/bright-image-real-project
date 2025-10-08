@@ -97,3 +97,24 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.service-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card-link:hover {
+  transform: translateY(-5px);
+}
+
+.service-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-card-link:hover .service-card {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
