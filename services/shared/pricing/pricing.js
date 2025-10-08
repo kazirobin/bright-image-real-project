@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updatePricingCards(isBulk) {
     priceElements.forEach((priceElement) => {
-      const perImagePrice = priceElement.getAttribute('data-per-image');
-      const bulkPrice = priceElement.getAttribute('data-bulk');
+      const perImagePrice = priceElement.getAttribute("data-per-image");
+      const bulkPrice = priceElement.getAttribute("data-bulk");
       
       // Update price based on toggle state
       priceElement.textContent = isBulk ? bulkPrice : perImagePrice;
@@ -119,10 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Rest of your existing code for smooth scroll and hover effects...
+  // CTA button click handler
   document.querySelectorAll(".cta-button").forEach((button) => {
-    button.addEventListener("click", function (e) {
-      e.preventDefault();
+    button.addEventListener("click", function () {
       this.style.transform = "scale(0.95)";
       setTimeout(() => {
         this.style.transform = "";
@@ -134,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Pricing card hover effects
   document.querySelectorAll(".pricing-card").forEach((card) => {
     card.addEventListener("mouseenter", function () {
       this.style.transform = this.classList.contains("popular")
