@@ -6,10 +6,18 @@
     text-align: center;
   }
   .service-card {
+    height: 100%;
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    .image-compare{
+      flex: 1;
+    }
     .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      
       i{
         color: green;
       }

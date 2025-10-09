@@ -632,7 +632,7 @@ img {
     gap: 1.5rem;
   }
 
-  .service-category {
+  .services-grid .service-category {
     margin-bottom: 2rem;
     padding: 1.5rem;
     background: linear-gradient(135deg, #001bff 0%, #001bff 100%);

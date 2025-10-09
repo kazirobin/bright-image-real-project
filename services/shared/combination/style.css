@@ -550,7 +550,6 @@
   transition: background-color 0.3s ease;
   background: var(--primary-color);
   color: white;
-  width: 300px;
   margin: 16px auto 0;
 }
 
