@@ -300,7 +300,7 @@ img {
   text-transform: uppercase;
 }
 
-.nav-btn {
+ .slider .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -321,7 +321,7 @@ img {
   opacity: 0.7;
 }
 
-.nav-btn:hover {
+.slider .nav-btn:hover {
   background: var(--secondary-color);
   color: var(--white);
   opacity: 1;
@@ -686,7 +686,7 @@ img {
   z-index: 10;
 }
 
-.nav-btn {
+.slider .nav-btn {
   background: var(--white);
   border: none;
   border-radius: 50%;
@@ -703,7 +703,7 @@ img {
   font-size: 1.125rem;
 }
 
-.nav-btn:hover {
+.slider .nav-btn:hover {
   background: var(--primary-color, #3b82f6);
   color: var(--white);
 }
@@ -754,7 +754,7 @@ img {
     min-height: 320px;
   }
   
-  .nav-btn {
+  .slider .nav-btn {
     width: 3rem;
     height: 3rem;
     font-size: 1rem;
@@ -1622,7 +1622,7 @@ img {
     font-size: 1.5rem;
   }
 
-  .nav-btn {
+  .slider .nav-btn {
     transform: translateY(0);
     width: 35px;
     height: 35px;
@@ -1745,7 +1745,7 @@ img {
   }
 
   .contact-wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1.2fr;
   }
 
   .contact-info .section-header {
