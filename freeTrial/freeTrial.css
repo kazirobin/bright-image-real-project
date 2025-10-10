@@ -460,14 +460,14 @@
   box-shadow: var(--shadow-sm);
 }
 
-.service-categories {
+ .service-selection .service-categories {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
 }
 
-.service-category {
+ .service-selection .service-categories .service-category {
   background: linear-gradient(145deg, #ffffff, #f8f9fa);
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: var(--radius-lg);
@@ -476,12 +476,12 @@
   box-shadow: var(--shadow-sm);
 }
 
-.service-category:hover {
+ .service-selection .service-categories .service-category:hover {
   box-shadow: var(--shadow-md);
   border-color: var(--primary-color);
 }
 
-.service-category h4 {
+ .service-selection .service-categories .service-category h4 {
   margin: 0 0 var(--spacing-md) 0;
   color: var(--text-dark);
   font-size: 1.2rem;
@@ -494,7 +494,7 @@
   position: relative;
 }
 
-.service-category h4::after {
+ .service-selection .service-categories .service-category h4::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -505,11 +505,11 @@
   transition: width 0.3s ease;
 }
 
-.service-category:hover h4::after {
+ .service-selection .service-categories .service-category:hover h4::after {
   width: 80px;
 }
 
-.service-category h4 i {
+ .service-selection .service-categories .service-category h4 i {
   width: 40px;
   height: 40px;
   background: linear-gradient(135deg, var(--text-dark), var(--primary-color));
@@ -585,7 +585,6 @@
 
 .service-name {
   font-weight: 600;
-  color: var(--text-dark);
   display: block;
   margin-bottom: 0.25rem;
   font-size: 0.95rem;
@@ -842,7 +841,7 @@
     grid-template-columns: 1fr 1fr;
   }
   
-  .service-categories {
+   .service-selection .service-categories {
     grid-template-columns: repeat(2, 1fr);
   }
   
@@ -861,7 +860,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
   
-  .service-categories {
+   .service-selection .service-categories {
     grid-template-columns: repeat(3, 1fr);
   }
   

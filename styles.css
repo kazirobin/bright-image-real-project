@@ -1943,4 +1943,7 @@ img {
                 width: 120px;
                 height: 70px;
             }
+            .hide-mobile{
+              display: none;
+            }
         }
