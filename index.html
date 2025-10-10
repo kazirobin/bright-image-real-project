@@ -27,11 +27,10 @@
     <link rel="stylesheet" href="./services/shared/pricing/pricing.css" />
     <!-- Footer Styles -->
     <link rel="stylesheet" href="./sharedLayout/footer/footer.css" />
-
-    
   </head>
   <body>
     <!-- Navigation Header -->
+
     <header class="navbar">
       <div class="nav-container">
         <!-- Logo -->
@@ -1466,23 +1465,7 @@
             </div>
           </div>
 
-
-
-          
           <div class="contact-form-container">
-            <form class="free-trial-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-            </div>
-
-            <!-- Service Selection with Checkboxes -->
             <form class="free-trial-form">
               <div class="form-row">
                 <div class="form-group">
@@ -1495,228 +1478,249 @@
                 </div>
               </div>
 
-              <div class="form-group service-selection">
-                <label>Select Services *</label>
-                <p class="form-hint">You can select multiple services</p>
+              <!-- Service Selection with Checkboxes -->
+              <form class="free-trial-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                </div>
 
-                <div class="service-categories">
-                  <div class="service-category" style="background-color: white;">
-                    <h4>BASIC EDITING</h4>
-                    <div class="service-options">
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="clipping-path"
-                          name="services"
-                          value="clipping-path"
-                        />
-                        <label for="clipping-path" class="service-label">
-                          <span class="service-name">Clipping Path</span>
-                        </label>
-                      </div>
+                <div class="form-group service-selection">
+                  <label>Select Services *</label>
+                  <p class="form-hint">You can select multiple services</p>
 
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="background-removal"
-                          name="services"
-                          value="background-removal"
-                        />
-                        <label for="background-removal" class="service-label">
-                          <span class="service-name">Background Removal</span>
-                        </label>
-                      </div>
+                  <div class="service-categories">
+                    <div
+                      class="service-category"
+                      style="background-color: white"
+                    >
+                      <h4>BASIC EDITING</h4>
+                      <div class="service-options">
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="clipping-path"
+                            name="services"
+                            value="clipping-path"
+                          />
+                          <label for="clipping-path" class="service-label">
+                            <span class="service-name">Clipping Path</span>
+                          </label>
+                        </div>
 
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="resizing"
-                          name="services"
-                          value="resizing"
-                        />
-                        <label for="resizing" class="service-label">
-                          <span class="service-name">Resizing</span>
-                        </label>
-                      </div>
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="background-removal"
+                            name="services"
+                            value="background-removal"
+                          />
+                          <label for="background-removal" class="service-label">
+                            <span class="service-name">Background Removal</span>
+                          </label>
+                        </div>
 
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="masking"
-                          name="services"
-                          value="masking"
-                        />
-                        <label for="masking" class="service-label">
-                          <span class="service-name">Masking</span>
-                        </label>
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="resizing"
+                            name="services"
+                            value="resizing"
+                          />
+                          <label for="resizing" class="service-label">
+                            <span class="service-name">Resizing</span>
+                          </label>
+                        </div>
+
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="masking"
+                            name="services"
+                            value="masking"
+                          />
+                          <label for="masking" class="service-label">
+                            <span class="service-name">Masking</span>
+                          </label>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="service-category" style="background-color: white;">
-                    <h4>ADVANCED EDITING</h4>
-                    <div class="service-options">
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="ecommerce-editing"
-                          name="services"
-                          value="ecommerce-editing"
-                        />
-                        <label for="ecommerce-editing" class="service-label">
-                          <span class="service-name">E-commerce Editing</span>
-                        </label>
-                      </div>
+                    <div
+                      class="service-category"
+                      style="background-color: white"
+                    >
+                      <h4>ADVANCED EDITING</h4>
+                      <div class="service-options">
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="ecommerce-editing"
+                            name="services"
+                            value="ecommerce-editing"
+                          />
+                          <label for="ecommerce-editing" class="service-label">
+                            <span class="service-name">E-commerce Editing</span>
+                          </label>
+                        </div>
 
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="beauty-retouching"
-                          name="services"
-                          value="beauty-retouching"
-                        />
-                        <label for="beauty-retouching" class="service-label">
-                          <span class="service-name">Beauty Retouching</span>
-                        </label>
-                      </div>
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="beauty-retouching"
+                            name="services"
+                            value="beauty-retouching"
+                          />
+                          <label for="beauty-retouching" class="service-label">
+                            <span class="service-name">Beauty Retouching</span>
+                          </label>
+                        </div>
 
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="jewelry-retouching"
-                          name="services"
-                          value="jewelry-retouching"
-                        />
-                        <label for="jewelry-retouching" class="service-label">
-                          <span class="service-name">Jewelry Retouching</span>
-                        </label>
-                      </div>
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="jewelry-retouching"
+                            name="services"
+                            value="jewelry-retouching"
+                          />
+                          <label for="jewelry-retouching" class="service-label">
+                            <span class="service-name">Jewelry Retouching</span>
+                          </label>
+                        </div>
 
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="real-estate-editing"
-                          name="services"
-                          value="real-estate-editing"
-                        />
-                        <label for="real-estate-editing" class="service-label">
-                          <span class="service-name">Real Estate Editing</span>
-                        </label>
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="real-estate-editing"
+                            name="services"
+                            value="real-estate-editing"
+                          />
+                          <label
+                            for="real-estate-editing"
+                            class="service-label"
+                          >
+                            <span class="service-name"
+                              >Real Estate Editing</span
+                            >
+                          </label>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="service-category" style="background-color: white;">
-                    <h4>IMAGE MANIPULATION</h4>
-                    <div class="service-options">
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="image-masking"
-                          name="services"
-                          value="image-masking"
-                        />
-                        <label for="image-masking" class="service-label">
-                          <span class="service-name">Image Masking</span>
-                        </label>
-                      </div>
+                    <div
+                      class="service-category"
+                      style="background-color: white"
+                    >
+                      <h4>IMAGE MANIPULATION</h4>
+                      <div class="service-options">
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="image-masking"
+                            name="services"
+                            value="image-masking"
+                          />
+                          <label for="image-masking" class="service-label">
+                            <span class="service-name">Image Masking</span>
+                          </label>
+                        </div>
 
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="blending"
-                          name="services"
-                          value="blending"
-                        />
-                        <label for="blending" class="service-label">
-                          <span class="service-name">Blending</span>
-                        </label>
-                      </div>
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="blending"
+                            name="services"
+                            value="blending"
+                          />
+                          <label for="blending" class="service-label">
+                            <span class="service-name">Blending</span>
+                          </label>
+                        </div>
 
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="color-adjustment"
-                          name="services"
-                          value="color-adjustment"
-                        />
-                        <label for="color-adjustment" class="service-label">
-                          <span class="service-name">Color Adjustment</span>
-                        </label>
-                      </div>
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="color-adjustment"
+                            name="services"
+                            value="color-adjustment"
+                          />
+                          <label for="color-adjustment" class="service-label">
+                            <span class="service-name">Color Adjustment</span>
+                          </label>
+                        </div>
 
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="image-combination"
-                          name="services"
-                          value="image-combination"
-                        />
-                        <label for="image-combination" class="service-label">
-                          <span class="service-name">Image Combination</span>
-                        </label>
-                      </div>
-                      <div class="service-option">
-                        <input
-                          type="checkbox"
-                          id="other"
-                          name="services"
-                          value="image-combination"
-                        />
-                        <label for="other" class="service-label">
-                          <span class="service-name">Other</span>
-                        </label>
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="image-combination"
+                            name="services"
+                            value="image-combination"
+                          />
+                          <label for="image-combination" class="service-label">
+                            <span class="service-name">Image Combination</span>
+                          </label>
+                        </div>
+                        <div class="service-option">
+                          <input
+                            type="checkbox"
+                            id="other"
+                            name="services"
+                            value="image-combination"
+                          />
+                          <label for="other" class="service-label">
+                            <span class="service-name">Other</span>
+                          </label>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </form>
 
-             
+              <div class="form-group">
+                <label for="instructions">Special Instructions</label>
+                <textarea
+                  id="instructions"
+                  name="instructions"
+                  rows="4"
+                  placeholder="Any specific requirements for your image?"
+                ></textarea>
               </div>
+
+              <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                  <i class="fas fa-cloud-upload-alt"></i>
+                  <h3>Upload Your Image</h3>
+                  <p>Drag & drop your image here or click to browse</p>
+                  <input
+                    type="file"
+                    id="imageUpload"
+                    accept="image/*"
+                    style="display: none"
+                  />
+                  <button type="button" class="btn btn-outline" id="browseBtn">
+                    Browse Files
+                  </button>
+                  <div class="file-info" id="fileInfo"></div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Start a Free Trial
+              </button>
             </form>
-
-            <div class="form-group">
-              <label for="instructions">Special Instructions</label>
-              <textarea
-                id="instructions"
-                name="instructions"
-                rows="4"
-                placeholder="Any specific requirements for your image?"
-              ></textarea>
-            </div>
-
-            <div class="upload-section">
-              <div class="upload-area" id="uploadArea">
-                <i class="fas fa-cloud-upload-alt"></i>
-                <h3>Upload Your Image</h3>
-                <p>Drag & drop your image here or click to browse</p>
-                <input
-                  type="file"
-                  id="imageUpload"
-                  accept="image/*"
-                  style="display: none"
-                />
-                <button type="button" class="btn btn-outline" id="browseBtn">
-                  Browse Files
-                </button>
-                <div class="file-info" id="fileInfo"></div>
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary submit-btn">
-              <i class="fas fa-paper-plane"></i>
-              Start a Free Trial
-            </button>
-          </form>
           </div>
-
-
-
-
         </div>
       </div>
     </section>
-<script src="./freeTrial/freeTrial.js"></script>
+    <script src="./freeTrial/freeTrial.js"></script>
     <!-- footer -->
 
     <!-- Footer -->
