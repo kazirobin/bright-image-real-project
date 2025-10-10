@@ -48,6 +48,7 @@ a {
   margin-bottom: 20px;
   line-height: 1.7;
   max-width: 380px;
+  font-weight: 600;
 }
 
 .social-icons-container {
@@ -127,6 +128,7 @@ a {
 }
 
 .footer-links a {
+  font-weight: 600;
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -140,10 +142,10 @@ a {
 /* Contact info */
 .contact-info p {
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .contact-info a {
-  color: var(--primary-color-light);
   text-decoration: none;
   transition: all 0.3s ease;
 }
